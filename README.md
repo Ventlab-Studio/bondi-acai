@@ -6,6 +6,7 @@ Plan de negocios para **Bondi Açaí**, el primer negocio especializado en aça�
 
 ## Plan de Negocios
 
+0. [Brief del proyecto](Plan%20de%20Negocios/00-brief.md)
 1. [Resumen Ejecutivo](Plan%20de%20Negocios/01-resumen-ejecutivo.md)
 2. [Concepto de Negocio](Plan%20de%20Negocios/02-concepto-de-negocio.md)
 3. [Análisis de Mercado](Plan%20de%20Negocios/03-analisis-de-mercado.md)
