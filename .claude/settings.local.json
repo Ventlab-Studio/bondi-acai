@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip list:*)",
+      "Bash(pip install:*)",
+      "Bash(python -m yt_dlp --list-subs \"https://youtu.be/xZ8d9g6BcKM\")",
+      "Bash(python -m yt_dlp --cookies-from-browser chrome --list-subs \"https://youtu.be/xZ8d9g6BcKM\")",
+      "Bash(python -m yt_dlp --cookies-from-browser edge --list-subs \"https://youtu.be/xZ8d9g6BcKM\")",
+      "WebFetch(domain:www.youtube.com)",
+      "WebFetch(domain:youtubetranscript.com)",
+      "WebFetch(domain:kome.ai)",
+      "WebSearch",
+      "WebFetch(domain:glasp.co)",
+      "WebFetch(domain:hormozi.blog)",
+      "WebFetch(domain:www.videowiz.ai)",
+      "WebFetch(domain:leaderself.com)",
+      "WebFetch(domain:transcript.lol)",
+      "WebFetch(domain:medium.com)",
+      "Bash(python:*)",
+      "Bash(cd /tmp)",
+      "Bash(npm install:*)",
+      "Bash(node -e ':*)",
+      "Bash(node --input-type=module -e ':*)",
+      "WebFetch(domain:github.com)",
+      "Bash(claude mcp:*)",
+      "Bash(wc:*)",
+      "Bash(gh org:*)",
+      "Bash(gh api:*)"
+    ]
+  }
+}
