@@ -21,6 +21,15 @@ Plan de negocios para **Bondi Açaí**, el primer negocio especializado en aça�
 
 ---
 
+## Evaluación Financiera
+
+Modelo financiero con proyecciones, indicadores de rentabilidad y propuesta al inversionista.
+
+- [Modelo financiero (Excel)](Evaluacion%20Financiera/Bondi_Acai_Evaluacion_Financiera.xlsx)
+- [Metodología y propuesta al inversionista](Evaluacion%20Financiera/Metodologia_y_Propuesta_Inversionista.md)
+
+---
+
 ## Investigación de Soporte
 
 Documentos de investigación de mercado que fundamentan el plan:
@@ -35,11 +44,3 @@ Documentos de investigación de mercado que fundamentan el plan:
 8. [Estrategia de crecimiento y escalabilidad](Investigacion%20de%20Mercado/08-estrategia-crecimiento-escalabilidad.md)
 9. [Lecciones de la industria del frozen yogurt (Hormozi)](Investigacion%20de%20Mercado/09-lecciones-industria-froyo-hormozi.md)
 
----
-
-## Evaluación Financiera
-
-Modelo financiero con proyecciones, indicadores de rentabilidad y propuesta al inversionista.
-
-- [Modelo financiero (Excel)](Evaluacion%20Financiera/Bondi_Acai_Evaluacion_Financiera.xlsx)
-- [Metodología y propuesta al inversionista](Evaluacion%20Financiera/Metodologia_y_Propuesta_Inversionista.md)
