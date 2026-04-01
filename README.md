@@ -44,3 +44,10 @@ Documentos de investigación de mercado que fundamentan el plan:
 8. [Estrategia de crecimiento y escalabilidad](Investigacion%20de%20Mercado/08-estrategia-crecimiento-escalabilidad.md)
 9. [Lecciones de la industria del frozen yogurt (Hormozi)](Investigacion%20de%20Mercado/09-lecciones-industria-froyo-hormozi.md)
 
+---
+
+## Brand Book
+
+Manual de identidad de marca — colores, tipografía, logo, isotipo, voz, aplicaciones y guía de redes sociales.
+
+- [Brand Book (sitio web)](Brand/brand-book.html)

@@ -1,0 +1,2515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bondi Açaí — Brand Book</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700;800;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #2D2D2D;
+      background: #FAFAFA;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+
+    /* ===== CSS VARIABLES ===== */
+    :root {
+      --acai:    #5B2C6F;
+      --acai-light: #7D3C98;
+      --acai-dark:  #4A235A;
+      --green:   #27AE60;
+      --green-light: #2ECC71;
+      --sand:    #F5E6CC;
+      --sand-light: #FAF3E8;
+      --white:   #FFFFFF;
+      --coral:   #FF6B6B;
+      --coral-light: #FF8E8E;
+      --dark:    #1A1A2E;
+      --gray:    #6B7280;
+      --gray-light: #E5E7EB;
+    }
+
+    /* ===== NAVIGATION ===== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100vh;
+      background: var(--dark);
+      color: var(--white);
+      padding: 2rem 0;
+      overflow-y: auto;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+    }
+    .nav__logo {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 1.3rem;
+      padding: 0 1.5rem 1.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      letter-spacing: -0.02em;
+    }
+    .nav__logo span { color: var(--coral); }
+    .nav__label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: rgba(255,255,255,0.35);
+      padding: 1.5rem 1.5rem 0.5rem;
+      font-weight: 600;
+    }
+    .nav a {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.55rem 1.5rem;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 400;
+      transition: all 0.2s;
+      border-left: 3px solid transparent;
+    }
+    .nav a:hover {
+      color: var(--white);
+      background: rgba(255,255,255,0.05);
+      border-left-color: var(--coral);
+    }
+    .nav a .num {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--coral);
+      min-width: 1.4rem;
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    .main {
+      margin-left: 260px;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      min-height: 100vh;
+      padding: 5rem 4rem;
+      border-bottom: 1px solid var(--gray-light);
+    }
+    section:last-child { border-bottom: none; }
+
+    .section-num {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--coral);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 0.5rem;
+    }
+    .section-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 2.8rem;
+      color: var(--acai);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      letter-spacing: -0.03em;
+    }
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--gray);
+      max-width: 600px;
+      margin-bottom: 3rem;
+      line-height: 1.7;
+    }
+
+    /* ===== COVER ===== */
+    .cover {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      background: linear-gradient(135deg, var(--acai-dark) 0%, var(--acai) 40%, var(--acai-light) 100%);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: rgba(255,107,107,0.08);
+    }
+    .cover::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: rgba(39,174,96,0.06);
+    }
+    .cover__content { position: relative; z-index: 1; }
+    .cover__brand {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 900;
+      font-size: 5rem;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+    .cover__brand-accent { color: var(--coral); }
+    .cover__tagline {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 1.4rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: 3rem;
+    }
+    .cover__divider {
+      width: 60px;
+      height: 3px;
+      background: var(--coral);
+      margin: 0 auto 2rem;
+      border-radius: 2px;
+    }
+    .cover__label {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
+    .cover__year {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.85rem;
+      opacity: 0.35;
+      margin-top: 0.5rem;
+    }
+    .cover__wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      z-index: 1;
+    }
+    .cover__wave svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* ===== GRID LAYOUTS ===== */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .grid-5 {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    /* ===== CARDS ===== */
+    .card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      border: 1px solid var(--gray-light);
+    }
+    .card--accent {
+      background: var(--sand-light);
+      border-color: var(--sand);
+    }
+    .card__icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    .card__title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--acai);
+      margin-bottom: 0.5rem;
+    }
+    .card__text {
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    /* ===== COLOR SWATCHES ===== */
+    .swatch {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+    .swatch:hover { transform: translateY(-4px); }
+    .swatch__color {
+      height: 160px;
+      display: flex;
+      align-items: flex-end;
+      padding: 1rem 1.2rem;
+    }
+    .swatch__color-name {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: white;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+    .swatch__info {
+      background: var(--white);
+      padding: 1rem 1.2rem;
+    }
+    .swatch__hex {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--dark);
+      margin-bottom: 0.25rem;
+    }
+    .swatch__values {
+      font-size: 0.75rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    /* ===== TYPOGRAPHY SHOWCASE ===== */
+    .type-display {
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--gray-light);
+    }
+    .type-display:last-child { border-bottom: none; }
+    .type-display__label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--coral);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .type-display__sample {
+      color: var(--acai);
+      margin-bottom: 0.5rem;
+    }
+    .type-display__meta {
+      font-size: 0.8rem;
+      color: var(--gray);
+    }
+    .type-display__meta code {
+      background: var(--sand-light);
+      padding: 0.15em 0.45em;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      color: var(--acai);
+    }
+
+    /* ===== HIERARCHY TABLE ===== */
+    .hierarchy-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+    }
+    .hierarchy-table th {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--gray);
+      font-weight: 600;
+      text-align: left;
+      padding: 0.75rem 1rem;
+      border-bottom: 2px solid var(--gray-light);
+    }
+    .hierarchy-table td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--gray-light);
+      vertical-align: middle;
+    }
+    .hierarchy-table td:first-child {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      color: var(--acai);
+      font-size: 0.85rem;
+    }
+    .hierarchy-table td:nth-child(2) {
+      font-size: 0.85rem;
+      color: var(--gray);
+    }
+
+    /* ===== DO/DONT ===== */
+    .do-dont {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .do-dont__col { }
+    .do-dont__header {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.6rem 1rem;
+      border-radius: 8px 8px 0 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .do-dont__header--do {
+      background: #ECFDF5;
+      color: #065F46;
+    }
+    .do-dont__header--dont {
+      background: #FEF2F2;
+      color: #991B1B;
+    }
+    .do-dont__list {
+      list-style: none;
+      background: var(--white);
+      border: 1px solid var(--gray-light);
+      border-top: none;
+      border-radius: 0 0 8px 8px;
+      padding: 1rem 1.2rem;
+    }
+    .do-dont__list li {
+      font-size: 0.88rem;
+      color: var(--gray);
+      padding: 0.4rem 0;
+      padding-left: 1.2rem;
+      position: relative;
+      line-height: 1.6;
+    }
+    .do-dont__list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+    .do-dont__header--do + .do-dont__list li::before { background: var(--green); }
+    .do-dont__header--dont + .do-dont__list li::before { background: var(--coral); }
+
+    /* ===== QUOTE ===== */
+    .quote {
+      background: linear-gradient(135deg, var(--acai) 0%, var(--acai-light) 100%);
+      color: var(--white);
+      padding: 3rem;
+      border-radius: 16px;
+      margin: 2rem 0;
+      position: relative;
+    }
+    .quote::before {
+      content: '\201C';
+      font-family: 'Poppins', sans-serif;
+      font-size: 6rem;
+      position: absolute;
+      top: -0.5rem;
+      left: 1.5rem;
+      opacity: 0.2;
+      line-height: 1;
+    }
+    .quote__text {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.3rem;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+    .quote__attr {
+      font-size: 0.85rem;
+      opacity: 0.6;
+      margin-top: 1rem;
+    }
+
+    /* ===== VISUAL ELEMENT BOXES ===== */
+    .visual-box {
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 200px;
+    }
+    .visual-box__label {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin-top: 1rem;
+    }
+    .visual-box__desc {
+      font-size: 0.8rem;
+      color: var(--gray);
+      margin-top: 0.3rem;
+    }
+
+    /* ===== WAVE SVG ===== */
+    .wave-demo {
+      width: 100%;
+      height: 80px;
+      margin: 1rem 0;
+    }
+    .wave-demo svg { width: 100%; height: 100%; }
+
+    /* ===== APPLICATION MOCKUPS ===== */
+    .mockup {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .mockup__header {
+      padding: 1rem 1.5rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .mockup__body {
+      padding: 2rem;
+    }
+
+    /* ===== PACKAGING MOCKUP ===== */
+    .cup-mockup {
+      width: 140px;
+      height: 180px;
+      border-radius: 12px 12px 20px 20px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+    .cup-mockup__name {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--white);
+    }
+    .cup-mockup__tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.55rem;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    /* ===== BRAND VOICE PERSONALITY ===== */
+    .personality {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--gray-light);
+    }
+    .personality:last-child { border-bottom: none; }
+    .personality__bar-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .personality__label {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.82rem;
+      color: var(--acai);
+      min-width: 100px;
+      text-align: right;
+    }
+    .personality__bar {
+      flex: 1;
+      height: 8px;
+      background: var(--gray-light);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .personality__bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      background: linear-gradient(90deg, var(--acai), var(--coral));
+    }
+    .personality__label-end {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.82rem;
+      color: var(--gray);
+      min-width: 100px;
+    }
+
+    /* ===== SOCIAL MEDIA MOCKUP ===== */
+    .social-post {
+      background: var(--white);
+      border-radius: 12px;
+      border: 1px solid var(--gray-light);
+      overflow: hidden;
+      max-width: 340px;
+    }
+    .social-post__header {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.8rem 1rem;
+    }
+    .social-post__avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--acai);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 0.65rem;
+      color: var(--white);
+    }
+    .social-post__username {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.82rem;
+      color: var(--dark);
+    }
+    .social-post__image {
+      width: 100%;
+      height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .social-post__caption {
+      padding: 1rem;
+      font-size: 0.82rem;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .social-post__caption strong {
+      font-weight: 600;
+    }
+
+    /* ===== TAGLINE SHOWCASE ===== */
+    .tagline-box {
+      padding: 2.5rem;
+      border-radius: 16px;
+      text-align: center;
+    }
+    .tagline-box__type {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .tagline-box__text {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      line-height: 1.3;
+    }
+
+    /* ===== SPACING HELPERS ===== */
+    .mt-1 { margin-top: 1rem; }
+    .mt-2 { margin-top: 2rem; }
+    .mt-3 { margin-top: 3rem; }
+    .mt-4 { margin-top: 4rem; }
+    .mb-1 { margin-bottom: 1rem; }
+    .mb-2 { margin-bottom: 2rem; }
+    .mb-3 { margin-bottom: 3rem; }
+
+    h3.subsection {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--acai);
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--sand);
+    }
+
+    p.body-text {
+      font-size: 0.95rem;
+      color: #4B5563;
+      line-height: 1.8;
+      max-width: 720px;
+      margin-bottom: 1.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.3em 0.8em;
+      border-radius: 20px;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .badge--primary { background: var(--acai); color: var(--white); }
+    .badge--green  { background: var(--green); color: var(--white); }
+    .badge--coral  { background: var(--coral); color: var(--white); }
+    .badge--sand   { background: var(--sand); color: var(--acai); }
+
+    /* ===== MOBILE NAVBAR ===== */
+    .mobile-bar {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 56px;
+      background: var(--dark);
+      z-index: 200;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.25rem;
+    }
+    .mobile-bar__logo {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--white);
+      letter-spacing: -0.02em;
+    }
+    .mobile-bar__logo span { color: var(--coral); }
+    .mobile-bar__btn {
+      width: 40px;
+      height: 40px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .mobile-bar__btn span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+    .mobile-bar__btn.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .mobile-bar__btn.is-open span:nth-child(2) { opacity: 0; }
+    .mobile-bar__btn.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ===== FULLSCREEN OVERLAY MENU ===== */
+    .overlay-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--dark);
+      z-index: 190;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.15rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .overlay-menu.is-visible { opacity: 1; }
+    .overlay-menu a {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.8rem 2rem;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 500;
+      transition: color 0.2s;
+      width: 100%;
+      max-width: 320px;
+    }
+    .overlay-menu a:hover,
+    .overlay-menu a:active { color: var(--white); }
+    .overlay-menu a .num {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--coral);
+      min-width: 1.6rem;
+    }
+    .overlay-menu__label {
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: rgba(255,255,255,0.25);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .nav { display: none; }
+      .mobile-bar { display: flex; }
+      .overlay-menu { display: flex; opacity: 0; pointer-events: none; }
+      .overlay-menu.is-open { opacity: 1; pointer-events: auto; }
+      .main { margin-left: 0; padding-top: 56px; }
+      section { padding: 3rem 1.5rem; }
+      section.cover { padding-top: 3rem; }
+      .cover__brand { font-size: 3rem; }
+      .section-title { font-size: 1.85rem; }
+      .grid-2, .grid-3, .grid-5 { grid-template-columns: 1fr; }
+      .grid-4 { grid-template-columns: 1fr 1fr; }
+      .do-dont { grid-template-columns: 1fr; }
+      .photo-guide { grid-template-columns: 1fr; }
+      .tone-example { grid-template-columns: 1fr; }
+      .min-size-examples { flex-wrap: wrap; }
+    }
+    @media (max-width: 480px) {
+      .grid-4 { grid-template-columns: 1fr; }
+      section { padding: 2.5rem 1rem; }
+      .cover__brand { font-size: 2.4rem; }
+      .cover__tagline { font-size: 1rem; letter-spacing: 0.15em; }
+      .section-title { font-size: 1.6rem; }
+      .section-subtitle { font-size: 0.95rem; }
+    }
+
+    /* ===== LOGO CONSTRUCTION ===== */
+    .logo-main {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      padding: 3rem;
+      min-height: 240px;
+    }
+
+    /* ===== CLEAR SPACE DEMO ===== */
+    .clear-space-demo {
+      display: inline-block;
+      position: relative;
+      padding: 2.5rem;
+      border: 2px dashed var(--coral);
+      border-radius: 12px;
+      margin: 1.5rem 0;
+    }
+    .clear-space-demo__arrow {
+      position: absolute;
+      font-size: 0.65rem;
+      color: var(--coral);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+    .clear-space-demo__arrow--top { top: 0.4rem; left: 50%; transform: translateX(-50%); }
+    .clear-space-demo__arrow--bottom { bottom: 0.4rem; left: 50%; transform: translateX(-50%); }
+    .clear-space-demo__arrow--left { left: 0.3rem; top: 50%; transform: translateY(-50%) rotate(-90deg); }
+    .clear-space-demo__arrow--right { right: 0.3rem; top: 50%; transform: translateY(-50%) rotate(90deg); }
+
+    /* ===== MIN SIZE ===== */
+    .min-size-examples {
+      display: flex;
+      align-items: flex-end;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+    .min-size-item {
+      text-align: center;
+    }
+    .min-size-item__label {
+      font-size: 0.75rem;
+      color: var(--gray);
+      margin-top: 0.5rem;
+    }
+
+    /* ===== PHOTO GRID ===== */
+    .photo-guide {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .photo-guide__item {
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--sand-light);
+      border: 1px solid var(--gray-light);
+    }
+    .photo-guide__preview {
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      background: var(--sand);
+    }
+    .photo-guide__info {
+      padding: 1rem;
+    }
+    .photo-guide__title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--acai);
+      margin-bottom: 0.25rem;
+    }
+    .photo-guide__desc {
+      font-size: 0.78rem;
+      color: var(--gray);
+      line-height: 1.5;
+    }
+
+    /* ===== PATTERN DEMO ===== */
+    .pattern-strip {
+      height: 80px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .pattern-strip__label {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      color: var(--white);
+      z-index: 1;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+
+    /* ===== TONE EXAMPLES ===== */
+    .tone-example {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .tone-example__card {
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .tone-example__label {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+    .tone-example__text {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav">
+  <div class="nav__logo">Bondi <span>Açaí</span></div>
+  <div class="nav__label">Brand Book</div>
+  <a href="#cover"><span class="num">00</span> Portada</a>
+  <a href="#intro"><span class="num">01</span> Introducción</a>
+  <a href="#essence"><span class="num">02</span> Esencia de Marca</a>
+  <a href="#logo"><span class="num">03</span> Logo e Isotipo</a>
+  <a href="#colors"><span class="num">04</span> Colores</a>
+  <a href="#typography"><span class="num">05</span> Tipografía</a>
+  <a href="#visuals"><span class="num">06</span> Elementos Visuales</a>
+  <a href="#photography"><span class="num">07</span> Fotografía</a>
+  <a href="#voice"><span class="num">08</span> Voz y Tono</a>
+  <a href="#applications"><span class="num">09</span> Aplicaciones</a>
+  <a href="#social"><span class="num">10</span> Redes Sociales</a>
+  <a href="#dont"><span class="num">11</span> Usos Incorrectos</a>
+</nav>
+
+<!-- ===== MOBILE NAVBAR ===== -->
+<div class="mobile-bar">
+  <div class="mobile-bar__logo">Bondi <span>Açaí</span></div>
+  <button class="mobile-bar__btn" id="menuToggle" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</div>
+
+<!-- ===== FULLSCREEN OVERLAY MENU ===== -->
+<div class="overlay-menu" id="overlayMenu">
+  <div class="overlay-menu__label">Brand Book</div>
+  <a href="#cover" class="overlay-link"><span class="num">00</span> Portada</a>
+  <a href="#intro" class="overlay-link"><span class="num">01</span> Introducción</a>
+  <a href="#essence" class="overlay-link"><span class="num">02</span> Esencia de Marca</a>
+  <a href="#logo" class="overlay-link"><span class="num">03</span> Logo e Isotipo</a>
+  <a href="#colors" class="overlay-link"><span class="num">04</span> Colores</a>
+  <a href="#typography" class="overlay-link"><span class="num">05</span> Tipografía</a>
+  <a href="#visuals" class="overlay-link"><span class="num">06</span> Elementos Visuales</a>
+  <a href="#photography" class="overlay-link"><span class="num">07</span> Fotografía</a>
+  <a href="#voice" class="overlay-link"><span class="num">08</span> Voz y Tono</a>
+  <a href="#applications" class="overlay-link"><span class="num">09</span> Aplicaciones</a>
+  <a href="#social" class="overlay-link"><span class="num">10</span> Redes Sociales</a>
+  <a href="#dont" class="overlay-link"><span class="num">11</span> Usos Incorrectos</a>
+</div>
+
+<!-- ===== MAIN ===== -->
+<main class="main">
+
+  <!-- ========== 00 — COVER ========== -->
+  <section class="cover" id="cover">
+    <div class="cover__content">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="130" height="130" style="margin-bottom:2rem; filter:drop-shadow(0 4px 24px rgba(0,0,0,0.25));">
+        <circle cx="100" cy="100" r="96" fill="rgba(255,255,255,0.12)"/>
+        <path d="M12,118 C42,82 72,140 102,104 C132,68 162,126 192,92" stroke="#FFFFFF" stroke-width="12" fill="none" stroke-linecap="round"/>
+        <path d="M18,142 C48,108 78,162 108,128 C138,94 162,146 188,118" stroke="rgba(255,255,255,0.15)" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <circle cx="88" cy="62" r="13" fill="#FF6B6B"/>
+        <circle cx="112" cy="56" r="9" fill="#FF6B6B" opacity="0.75"/>
+        <circle cx="72" cy="72" r="7" fill="#FF6B6B" opacity="0.5"/>
+        <path d="M96,36 C104,22 110,18 100,8 C90,18 96,22 96,36Z" fill="#27AE60"/>
+        <path d="M104,34 C112,24 118,22 110,14" stroke="#27AE60" stroke-width="4" fill="none" stroke-linecap="round"/>
+      </svg>
+      <div class="cover__brand">
+        BONDI<br><span class="cover__brand-accent">AÇAÍ</span>
+      </div>
+      <div class="cover__tagline">Energía Natural</div>
+      <div class="cover__divider"></div>
+      <div class="cover__label">Brand Book</div>
+      <div class="cover__year">Manual de Identidad de Marca — 2026</div>
+    </div>
+    <div class="cover__wave">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,40 C320,100 440,0 720,50 C1000,100 1200,20 1440,60 L1440,120 L0,120 Z" fill="#FAFAFA" opacity="0.6"/>
+        <path d="M0,60 C360,10 480,90 720,40 C960,0 1200,80 1440,40 L1440,120 L0,120 Z" fill="#FAFAFA" opacity="0.4"/>
+        <path d="M0,80 C200,120 600,40 900,80 C1100,100 1300,60 1440,90 L1440,120 L0,120 Z" fill="#FAFAFA"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ========== 01 — INTRO ========== -->
+  <section id="intro">
+    <div class="section-num">01 — Introducción</div>
+    <h2 class="section-title">Sobre este manual</h2>
+    <p class="section-subtitle">Una guía para mantener la coherencia y fuerza de la marca Bondi Açaí en cada punto de contacto.</p>
+
+    <p class="body-text">
+      Este Brand Book es la referencia definitiva para cualquier persona que trabaje con la marca Bondi Açaí — ya sea el equipo interno, proveedores de diseño, impresores, gestores de redes sociales o socios comerciales. Su propósito es garantizar que la marca se presente de forma <strong>consistente, profesional y reconocible</strong> en todos los contextos.
+    </p>
+    <p class="body-text">
+      Cada elemento aquí definido — desde los colores y tipografías hasta el tono de comunicación — ha sido diseñado para transmitir la esencia de Bondi Açaí: <strong>energía natural, frescura tropical, bienestar accesible y un estilo de vida activo</strong>.
+    </p>
+
+    <div class="grid-3 mt-3">
+      <div class="card">
+        <div class="card__icon" style="background: #F3E8FF; color: var(--acai);">&#9733;</div>
+        <div class="card__title">Consistencia</div>
+        <div class="card__text">Cada punto de contacto con el cliente debe sentirse como parte de una misma experiencia de marca, sin importar el canal o formato.</div>
+      </div>
+      <div class="card">
+        <div class="card__icon" style="background: #ECFDF5; color: var(--green);">&#9670;</div>
+        <div class="card__title">Reconocimiento</div>
+        <div class="card__text">Una marca coherente se reconoce al instante. Estas guías aseguran que Bondi Açaí sea inconfundible en Barrancabermeja y más allá.</div>
+      </div>
+      <div class="card">
+        <div class="card__icon" style="background: #FEF2F2; color: var(--coral);">&#9829;</div>
+        <div class="card__title">Protección</div>
+        <div class="card__text">Estas reglas protegen la inversión en la marca. Una identidad mal aplicada diluye el valor construido y confunde al público.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 02 — BRAND ESSENCE ========== -->
+  <section id="essence">
+    <div class="section-num">02 — Esencia de Marca</div>
+    <h2 class="section-title">Quiénes somos</h2>
+    <p class="section-subtitle">Bondi Açaí es más que un negocio de bowls — es una propuesta de estilo de vida para Barrancabermeja.</p>
+
+    <!-- Origin -->
+    <h3 class="subsection">El Nombre</h3>
+    <p class="body-text">
+      <strong>"Bondi"</strong> evoca Bondi Beach en Sídney, Australia — uno de los íconos globales del estilo de vida activo, costero y fresco. La asociación es inmediata: energía, sol, bienestar y un toque aspiracional que conecta con la audiencia joven y digital. El nombre es corto, memorable, fácil de pronunciar en español y suena moderno.
+    </p>
+    <p class="body-text">
+      <strong>"Açaí"</strong> define la categoría: el superalimento amazónico que lidera la tendencia global de alimentación saludable. Juntos, comunican un concepto claro: <em>bienestar tropical con energía natural</em>.
+    </p>
+
+    <!-- Vision, Mission -->
+    <div class="grid-2 mt-3">
+      <div class="card card--accent">
+        <div class="card__title">Visión</div>
+        <div class="card__text">Ser la referencia en alimentación saludable, fresca y accesible en Barrancabermeja y el Magdalena Medio, y el punto de partida de una marca regional que conecte el bienestar con el estilo de vida tropical colombiano.</div>
+      </div>
+      <div class="card card--accent">
+        <div class="card__title">Misión</div>
+        <div class="card__text">Ofrecer bowls de açaí, smoothies y bebidas naturales preparados con ingredientes reales y de calidad, en un ambiente fresco y moderno, a precios accesibles para Barrancabermeja — demostrando que comer saludable puede ser delicioso, bonito y para todos.</div>
+      </div>
+    </div>
+
+    <!-- Values -->
+    <h3 class="subsection">Valores de Marca</h3>
+    <div class="grid-5 mt-2">
+      <div class="card" style="text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.75rem;">&#127807;</div>
+        <div class="card__title" style="font-size:0.9rem;">Frescura Real</div>
+        <div class="card__text" style="font-size:0.8rem;">Ingredientes de verdad, sin polvos ni artificiales. Lo que ves es lo que comes.</div>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.75rem;">&#128178;</div>
+        <div class="card__title" style="font-size:0.9rem;">Accesibilidad</div>
+        <div class="card__text" style="font-size:0.8rem;">Saludable no es sinónimo de caro. Precios pensados para Barrancabermeja.</div>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.75rem;">&#9889;</div>
+        <div class="card__title" style="font-size:0.9rem;">Energía</div>
+        <div class="card__text" style="font-size:0.8rem;">Cada producto es una fuente de energía natural, no un postre más.</div>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.75rem;">&#129309;</div>
+        <div class="card__title" style="font-size:0.9rem;">Comunidad</div>
+        <div class="card__text" style="font-size:0.8rem;">Crecemos con Barrancabermeja: alianzas locales, sabores locales, talento local.</div>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.75rem;">&#128065;</div>
+        <div class="card__title" style="font-size:0.9rem;">Transparencia</div>
+        <div class="card__text" style="font-size:0.8rem;">Preparación abierta, ingredientes visibles, comunicación honesta.</div>
+      </div>
+    </div>
+
+    <!-- Positioning -->
+    <h3 class="subsection">Posicionamiento</h3>
+    <div class="quote">
+      <div class="quote__text">"El primer lugar en Barrancabermeja donde encontrás açaí bowls de verdad — preparados al instante con fruta real, en un formato fresco y moderno, a precios que no asustan."</div>
+      <div class="quote__attr">— Propuesta de Valor</div>
+    </div>
+
+    <p class="body-text">La marca se posiciona en la intersección de cinco pilares:</p>
+    <div class="grid-5 mt-1">
+      <div style="text-align:center;">
+        <span class="badge badge--primary">Único</span>
+        <p style="font-size:0.78rem; color:var(--gray); margin-top:0.4rem;">Primer y único lugar de açaí en la ciudad</p>
+      </div>
+      <div style="text-align:center;">
+        <span class="badge badge--coral">Clima</span>
+        <p style="font-size:0.78rem; color:var(--gray); margin-top:0.4rem;">Perfecto para 28-32°C los 365 días</p>
+      </div>
+      <div style="text-align:center;">
+        <span class="badge badge--green">Visual</span>
+        <p style="font-size:0.78rem; color:var(--gray); margin-top:0.4rem;">Experiencia instagrameable y fotogénica</p>
+      </div>
+      <div style="text-align:center;">
+        <span class="badge badge--primary">Salud</span>
+        <p style="font-size:0.78rem; color:var(--gray); margin-top:0.4rem;">Alternativa saludable sin sacrificio de sabor</p>
+      </div>
+      <div style="text-align:center;">
+        <span class="badge badge--sand">Precio</span>
+        <p style="font-size:0.78rem; color:var(--gray); margin-top:0.4rem;">Justo y accesible gracias a operación lean</p>
+      </div>
+    </div>
+
+    <!-- Taglines -->
+    <h3 class="subsection">Taglines</h3>
+    <div class="grid-2 mt-2">
+      <div class="tagline-box" style="background: var(--acai); color: var(--white);">
+        <div class="tagline-box__type" style="color: var(--coral);">Tagline Principal</div>
+        <div class="tagline-box__text">Energía Natural</div>
+      </div>
+      <div class="tagline-box" style="background: var(--sand); color: var(--acai);">
+        <div class="tagline-box__type" style="color: var(--coral);">Tagline Secundario</div>
+        <div class="tagline-box__text" style="font-style:italic;">Feel the Wave</div>
+      </div>
+    </div>
+    <p class="body-text mt-2">
+      <strong>"Energía Natural"</strong> es el tagline principal y refuerza el beneficio funcional del producto. <strong>"Feel the Wave"</strong> es el tagline aspiracional en inglés — conecta con la estética surf/beach del nombre Bondi y resuena con la audiencia joven bilingüe en redes sociales. Se usa como complemento, nunca como reemplazo del tagline principal.
+    </p>
+    <p class="body-text">
+      Variantes aprobadas del tagline: <em>"Tu dosis de energía"</em> (contextos promocionales), <em>"Ride the vibe"</em> (limitado a redes sociales).
+    </p>
+  </section>
+
+  <!-- ========== 03 — LOGO ========== -->
+  <section id="logo">
+    <div class="section-num">03 — Logo e Isotipo</div>
+    <h2 class="section-title">Logo e Isotipo</h2>
+    <p class="section-subtitle">El logo y el isotipo son los activos más importantes de la marca. Su uso correcto es fundamental para la coherencia visual.</p>
+
+    <!-- Primary Logo -->
+    <h3 class="subsection">Logo Principal</h3>
+    <p class="body-text">
+      El logotipo de Bondi Açaí se compone de la palabra "BONDI" en tipografía Poppins Black (extra bold) con el acento en el color coral, seguido de "AÇAÍ" como elemento secundario. El diseño es limpio, moderno y altamente legible en cualquier tamaño.
+    </p>
+
+    <div class="grid-2 mt-2">
+      <div class="logo-container" style="background: var(--white); border: 1px solid var(--gray-light);">
+        <div>
+          <div class="logo-main" style="font-size: 3.5rem; color: var(--acai);">BONDI</div>
+          <div class="logo-main" style="font-size: 2rem; color: var(--coral); letter-spacing: 0.15em;">AÇAÍ</div>
+        </div>
+      </div>
+      <div class="logo-container" style="background: var(--acai);">
+        <div>
+          <div class="logo-main" style="font-size: 3.5rem; color: var(--white);">BONDI</div>
+          <div class="logo-main" style="font-size: 2rem; color: var(--coral); letter-spacing: 0.15em;">AÇAÍ</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Variations -->
+    <h3 class="subsection">Variaciones del Logo</h3>
+    <div class="grid-4 mt-2">
+      <div class="logo-container" style="background: var(--white); border: 1px solid var(--gray-light); flex-direction:column; min-height:160px;">
+        <div class="logo-main" style="font-size: 1.8rem; color: var(--acai);">BONDI</div>
+        <div class="logo-main" style="font-size: 1rem; color: var(--coral); letter-spacing: 0.15em;">AÇAÍ</div>
+        <div style="font-size:0.65rem; color:var(--gray); margin-top:0.75rem; font-weight:500;">Fondo Claro</div>
+      </div>
+      <div class="logo-container" style="background: var(--acai); flex-direction:column; min-height:160px;">
+        <div class="logo-main" style="font-size: 1.8rem; color: var(--white);">BONDI</div>
+        <div class="logo-main" style="font-size: 1rem; color: var(--coral); letter-spacing: 0.15em;">AÇAÍ</div>
+        <div style="font-size:0.65rem; color:rgba(255,255,255,0.5); margin-top:0.75rem; font-weight:500;">Fondo Oscuro</div>
+      </div>
+      <div class="logo-container" style="background: var(--sand); flex-direction:column; min-height:160px;">
+        <div class="logo-main" style="font-size: 1.8rem; color: var(--acai);">BONDI</div>
+        <div class="logo-main" style="font-size: 1rem; color: var(--coral); letter-spacing: 0.15em;">AÇAÍ</div>
+        <div style="font-size:0.65rem; color:var(--gray); margin-top:0.75rem; font-weight:500;">Fondo Arena</div>
+      </div>
+      <div class="logo-container" style="background: var(--dark); flex-direction:column; min-height:160px;">
+        <div class="logo-main" style="font-size: 1.8rem; color: var(--white);">BONDI</div>
+        <div class="logo-main" style="font-size: 1rem; color: var(--coral); letter-spacing: 0.15em;">AÇAÍ</div>
+        <div style="font-size:0.65rem; color:rgba(255,255,255,0.5); margin-top:0.75rem; font-weight:500;">Monocromático</div>
+      </div>
+    </div>
+
+    <!-- Horizontal Variant -->
+    <h3 class="subsection">Variante Horizontal</h3>
+    <p class="body-text">Para espacios donde la altura es limitada (banners, encabezados web, empaques angostos), se usa la versión horizontal del logo.</p>
+    <div class="logo-container mt-2" style="background: var(--white); border: 1px solid var(--gray-light); min-height: 120px;">
+      <div style="display:flex; align-items:baseline; gap:0.75rem;">
+        <span class="logo-main" style="font-size: 2.8rem; color: var(--acai);">BONDI</span>
+        <span class="logo-main" style="font-size: 1.6rem; color: var(--coral); letter-spacing: 0.15em;">AÇAÍ</span>
+      </div>
+    </div>
+
+    <!-- Isotipo -->
+    <h3 class="subsection">Isotipo</h3>
+    <p class="body-text">
+      El isotipo es la marca reducida a su símbolo mínimo. Se usa cuando el espacio no permite el logotipo completo: foto de perfil en redes sociales, favicon, stickers pequeños, bordados, marcas de agua y app icons. Debe ser reconocible incluso a 16x16 píxeles.
+    </p>
+    <p class="body-text">
+      El diseño combina los dos pilares de la identidad: <strong>la ola</strong> (Bondi Beach, energía, movimiento) y <strong>la baya de açaí</strong> (forma circular, color morado, el producto). La ola principal cruza el centro de la forma, y una segunda ola sutil refuerza la sensación de fluidez. El acento en coral representa la vitalidad y la energía de la marca.
+    </p>
+
+    <div class="grid-4 mt-2">
+      <!-- Fondo claro -->
+      <div class="logo-container" style="background: var(--white); border: 1px solid var(--gray-light); flex-direction:column; min-height:220px;">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="120" height="120">
+          <circle cx="100" cy="100" r="96" fill="#5B2C6F"/>
+          <path d="M12,118 C42,82 72,140 102,104 C132,68 162,126 192,92" stroke="#FFFFFF" stroke-width="12" fill="none" stroke-linecap="round"/>
+          <path d="M18,142 C48,108 78,162 108,128 C138,94 162,146 188,118" stroke="rgba(255,255,255,0.15)" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <circle cx="88" cy="62" r="13" fill="#FF6B6B"/>
+          <circle cx="112" cy="56" r="9" fill="#FF6B6B" opacity="0.75"/>
+          <circle cx="72" cy="72" r="7" fill="#FF6B6B" opacity="0.5"/>
+          <path d="M96,36 C104,22 110,18 100,8 C90,18 96,22 96,36Z" fill="#27AE60"/>
+          <path d="M104,34 C112,24 118,22 110,14" stroke="#27AE60" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div style="font-size:0.65rem; color:var(--gray); margin-top:0.75rem; font-weight:500;">Fondo Claro</div>
+      </div>
+      <!-- Fondo oscuro -->
+      <div class="logo-container" style="background: var(--dark); flex-direction:column; min-height:220px;">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="120" height="120">
+          <circle cx="100" cy="100" r="96" fill="#5B2C6F"/>
+          <path d="M12,118 C42,82 72,140 102,104 C132,68 162,126 192,92" stroke="#FFFFFF" stroke-width="12" fill="none" stroke-linecap="round"/>
+          <path d="M18,142 C48,108 78,162 108,128 C138,94 162,146 188,118" stroke="rgba(255,255,255,0.15)" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <circle cx="88" cy="62" r="13" fill="#FF6B6B"/>
+          <circle cx="112" cy="56" r="9" fill="#FF6B6B" opacity="0.75"/>
+          <circle cx="72" cy="72" r="7" fill="#FF6B6B" opacity="0.5"/>
+          <path d="M96,36 C104,22 110,18 100,8 C90,18 96,22 96,36Z" fill="#27AE60"/>
+          <path d="M104,34 C112,24 118,22 110,14" stroke="#27AE60" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div style="font-size:0.65rem; color:rgba(255,255,255,0.5); margin-top:0.75rem; font-weight:500;">Fondo Oscuro</div>
+      </div>
+      <!-- Monocromo blanco -->
+      <div class="logo-container" style="background: var(--acai); flex-direction:column; min-height:220px;">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="120" height="120">
+          <circle cx="100" cy="100" r="96" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
+          <path d="M12,118 C42,82 72,140 102,104 C132,68 162,126 192,92" stroke="#FFFFFF" stroke-width="12" fill="none" stroke-linecap="round"/>
+          <path d="M18,142 C48,108 78,162 108,128 C138,94 162,146 188,118" stroke="rgba(255,255,255,0.15)" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <circle cx="88" cy="62" r="13" fill="rgba(255,255,255,0.5)"/>
+          <circle cx="112" cy="56" r="9" fill="rgba(255,255,255,0.35)"/>
+          <circle cx="72" cy="72" r="7" fill="rgba(255,255,255,0.2)"/>
+          <path d="M96,36 C104,22 110,18 100,8 C90,18 96,22 96,36Z" fill="rgba(255,255,255,0.4)"/>
+          <path d="M104,34 C112,24 118,22 110,14" stroke="rgba(255,255,255,0.4)" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div style="font-size:0.65rem; color:rgba(255,255,255,0.5); margin-top:0.75rem; font-weight:500;">Monocromático</div>
+      </div>
+      <!-- Fondo arena -->
+      <div class="logo-container" style="background: var(--sand); flex-direction:column; min-height:220px;">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="120" height="120">
+          <circle cx="100" cy="100" r="96" fill="#5B2C6F"/>
+          <path d="M12,118 C42,82 72,140 102,104 C132,68 162,126 192,92" stroke="#FFFFFF" stroke-width="12" fill="none" stroke-linecap="round"/>
+          <path d="M18,142 C48,108 78,162 108,128 C138,94 162,146 188,118" stroke="rgba(255,255,255,0.15)" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <circle cx="88" cy="62" r="13" fill="#FF6B6B"/>
+          <circle cx="112" cy="56" r="9" fill="#FF6B6B" opacity="0.75"/>
+          <circle cx="72" cy="72" r="7" fill="#FF6B6B" opacity="0.5"/>
+          <path d="M96,36 C104,22 110,18 100,8 C90,18 96,22 96,36Z" fill="#27AE60"/>
+          <path d="M104,34 C112,24 118,22 110,14" stroke="#27AE60" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div style="font-size:0.65rem; color:var(--gray); margin-top:0.75rem; font-weight:500;">Fondo Arena</div>
+      </div>
+    </div>
+
+    <!-- Isotipo Construction -->
+    <h3 class="subsection">Construcción del Isotipo</h3>
+    <p class="body-text">El isotipo se construye con cinco elementos jerárquicos:</p>
+    <div class="grid-5 mt-2">
+      <div class="card" style="text-align:center; padding:1.5rem 1rem;">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+          <circle cx="100" cy="100" r="96" fill="#5B2C6F"/>
+        </svg>
+        <div style="font-family:'Poppins',sans-serif; font-weight:600; font-size:0.75rem; color:var(--acai); margin-top:0.75rem;">1. Base Circular</div>
+        <div style="font-size:0.7rem; color:var(--gray);">La baya de açaí</div>
+      </div>
+      <div class="card" style="text-align:center; padding:1.5rem 1rem;">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+          <circle cx="100" cy="100" r="96" fill="#5B2C6F" opacity="0.3"/>
+          <path d="M12,118 C42,82 72,140 102,104 C132,68 162,126 192,92" stroke="#5B2C6F" stroke-width="12" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div style="font-family:'Poppins',sans-serif; font-weight:600; font-size:0.75rem; color:var(--acai); margin-top:0.75rem;">2. Ola Principal</div>
+        <div style="font-size:0.7rem; color:var(--gray);">Bondi Beach</div>
+      </div>
+      <div class="card" style="text-align:center; padding:1.5rem 1rem;">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+          <circle cx="100" cy="100" r="96" fill="#5B2C6F" opacity="0.3"/>
+          <path d="M18,142 C48,108 78,162 108,128 C138,94 162,146 188,118" stroke="#5B2C6F" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.4"/>
+        </svg>
+        <div style="font-family:'Poppins',sans-serif; font-weight:600; font-size:0.75rem; color:var(--acai); margin-top:0.75rem;">3. Ola Sutil</div>
+        <div style="font-size:0.7rem; color:var(--gray);">Profundidad</div>
+      </div>
+      <div class="card" style="text-align:center; padding:1.5rem 1rem;">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+          <circle cx="100" cy="100" r="96" fill="#5B2C6F" opacity="0.15"/>
+          <circle cx="88" cy="62" r="13" fill="#FF6B6B"/>
+          <circle cx="112" cy="56" r="9" fill="#FF6B6B" opacity="0.75"/>
+          <circle cx="72" cy="72" r="7" fill="#FF6B6B" opacity="0.5"/>
+        </svg>
+        <div style="font-family:'Poppins',sans-serif; font-weight:600; font-size:0.75rem; color:var(--acai); margin-top:0.75rem;">4. Bayas Coral</div>
+        <div style="font-size:0.7rem; color:var(--gray);">Energía, vitalidad</div>
+      </div>
+      <div class="card" style="text-align:center; padding:1.5rem 1rem;">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+          <circle cx="100" cy="100" r="96" fill="#5B2C6F" opacity="0.15"/>
+          <path d="M96,36 C104,22 110,18 100,8 C90,18 96,22 96,36Z" fill="#27AE60"/>
+          <path d="M104,34 C112,24 118,22 110,14" stroke="#27AE60" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div style="font-family:'Poppins',sans-serif; font-weight:600; font-size:0.75rem; color:var(--acai); margin-top:0.75rem;">5. Hoja</div>
+        <div style="font-size:0.7rem; color:var(--gray);">Naturaleza, frescura</div>
+      </div>
+    </div>
+
+    <!-- Isotipo Sizes -->
+    <h3 class="subsection">Usos del Isotipo</h3>
+    <div class="grid-4 mt-2">
+      <div class="card" style="text-align:center;">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="80" height="80">
+          <circle cx="100" cy="100" r="96" fill="#5B2C6F"/>
+          <path d="M12,118 C42,82 72,140 102,104 C132,68 162,126 192,92" stroke="#FFFFFF" stroke-width="12" fill="none" stroke-linecap="round"/>
+          <path d="M18,142 C48,108 78,162 108,128 C138,94 162,146 188,118" stroke="rgba(255,255,255,0.15)" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <circle cx="88" cy="62" r="13" fill="#FF6B6B"/>
+          <circle cx="112" cy="56" r="9" fill="#FF6B6B" opacity="0.75"/>
+          <circle cx="72" cy="72" r="7" fill="#FF6B6B" opacity="0.5"/>
+          <path d="M96,36 C104,22 110,18 100,8 C90,18 96,22 96,36Z" fill="#27AE60"/>
+          <path d="M104,34 C112,24 118,22 110,14" stroke="#27AE60" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div class="card__title mt-1" style="font-size:0.8rem;">Foto de Perfil</div>
+        <div class="card__text" style="font-size:0.75rem;">Instagram, TikTok, WhatsApp, Google</div>
+      </div>
+      <div class="card" style="text-align:center;">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+          <circle cx="100" cy="100" r="96" fill="#5B2C6F"/>
+          <path d="M12,118 C42,82 72,140 102,104 C132,68 162,126 192,92" stroke="#FFFFFF" stroke-width="14" fill="none" stroke-linecap="round"/>
+          <circle cx="88" cy="62" r="15" fill="#FF6B6B"/>
+        </svg>
+        <div class="card__title mt-1" style="font-size:0.8rem;">Favicon</div>
+        <div class="card__text" style="font-size:0.75rem;">Navegador, 16-32px. Se simplifica a ola + punto.</div>
+      </div>
+      <div class="card" style="text-align:center;">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="48" height="48" style="opacity:0.15;">
+          <circle cx="100" cy="100" r="96" fill="#5B2C6F"/>
+          <path d="M12,118 C42,82 72,140 102,104 C132,68 162,126 192,92" stroke="#FFFFFF" stroke-width="12" fill="none" stroke-linecap="round"/>
+          <circle cx="88" cy="62" r="13" fill="#FF6B6B"/>
+          <circle cx="112" cy="56" r="9" fill="#FF6B6B" opacity="0.75"/>
+        </svg>
+        <div class="card__title mt-1" style="font-size:0.8rem;">Marca de Agua</div>
+        <div class="card__text" style="font-size:0.75rem;">Sobre fotos de producto, 10-15% opacidad</div>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div style="width:80px; height:80px; margin:0 auto; border-radius:18px; background:var(--acai); display:flex; align-items:center; justify-content:center;">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="56" height="56">
+            <circle cx="100" cy="100" r="96" fill="none"/>
+            <path d="M12,118 C42,82 72,140 102,104 C132,68 162,126 192,92" stroke="#FFFFFF" stroke-width="12" fill="none" stroke-linecap="round"/>
+            <path d="M18,142 C48,108 78,162 108,128 C138,94 162,146 188,118" stroke="rgba(255,255,255,0.15)" stroke-width="8" fill="none" stroke-linecap="round"/>
+            <circle cx="88" cy="62" r="13" fill="#FF6B6B"/>
+            <circle cx="112" cy="56" r="9" fill="#FF6B6B" opacity="0.75"/>
+            <path d="M96,36 C104,22 110,18 100,8 C90,18 96,22 96,36Z" fill="#27AE60"/>
+          </svg>
+        </div>
+        <div class="card__title mt-1" style="font-size:0.8rem;">App Icon</div>
+        <div class="card__text" style="font-size:0.75rem;">Rounded square, fondo morado sólido</div>
+      </div>
+    </div>
+
+    <!-- Clear Space -->
+    <h3 class="subsection">Área de Protección</h3>
+    <p class="body-text">El logo debe tener siempre un área de protección mínima equivalente a la altura de la letra "B" del logotipo en todos sus lados. Ningún elemento gráfico, texto o borde debe invadir esta zona.</p>
+
+    <div style="text-align:center; margin: 2rem 0;">
+      <div class="clear-space-demo">
+        <span class="clear-space-demo__arrow clear-space-demo__arrow--top">B</span>
+        <span class="clear-space-demo__arrow clear-space-demo__arrow--bottom">B</span>
+        <span class="clear-space-demo__arrow clear-space-demo__arrow--left">B</span>
+        <span class="clear-space-demo__arrow clear-space-demo__arrow--right">B</span>
+        <div>
+          <div class="logo-main" style="font-size: 2.5rem; color: var(--acai);">BONDI</div>
+          <div class="logo-main" style="font-size: 1.3rem; color: var(--coral); letter-spacing: 0.15em;">AÇAÍ</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Minimum Sizes -->
+    <h3 class="subsection">Tamaños Mínimos</h3>
+    <p class="body-text">Para garantizar la legibilidad, el logo no debe reproducirse a tamaños menores que los indicados a continuación.</p>
+
+    <div class="min-size-examples">
+      <div class="min-size-item">
+        <div>
+          <div class="logo-main" style="font-size: 1rem; color: var(--acai);">BONDI</div>
+          <div class="logo-main" style="font-size: 0.55rem; color: var(--coral); letter-spacing: 0.1em;">AÇAÍ</div>
+        </div>
+        <div class="min-size-item__label">Impreso: 25 mm ancho mín.</div>
+      </div>
+      <div class="min-size-item">
+        <div>
+          <div class="logo-main" style="font-size: 0.8rem; color: var(--acai);">BONDI</div>
+          <div class="logo-main" style="font-size: 0.45rem; color: var(--coral); letter-spacing: 0.1em;">AÇAÍ</div>
+        </div>
+        <div class="min-size-item__label">Digital: 80px ancho mín.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 04 — COLORS ========== -->
+  <section id="colors">
+    <div class="section-num">04 — Paleta de Colores</div>
+    <h2 class="section-title">Colores</h2>
+    <p class="section-subtitle">La paleta refleja directamente el producto y el entorno tropical de Barrancabermeja.</p>
+
+    <h3 class="subsection">Colores Primarios</h3>
+    <p class="body-text">Estos son los colores fundamentales de la marca. El Morado Açaí es el color dominante y debe estar presente en la mayoría de las piezas de comunicación.</p>
+
+    <div class="grid-3 mt-2">
+      <!-- Morado Acai -->
+      <div class="swatch">
+        <div class="swatch__color" style="background: #5B2C6F;">
+          <span class="swatch__color-name">Morado Açaí</span>
+        </div>
+        <div class="swatch__info">
+          <div class="swatch__hex">#5B2C6F</div>
+          <div class="swatch__values">
+            RGB: 91, 44, 111<br>
+            CMYK: 18, 60, 0, 56<br>
+            Pantone: 2613 C (aprox.)
+          </div>
+        </div>
+      </div>
+      <!-- Verde Tropical -->
+      <div class="swatch">
+        <div class="swatch__color" style="background: #27AE60;">
+          <span class="swatch__color-name">Verde Tropical</span>
+        </div>
+        <div class="swatch__info">
+          <div class="swatch__hex">#27AE60</div>
+          <div class="swatch__values">
+            RGB: 39, 174, 96<br>
+            CMYK: 78, 0, 45, 32<br>
+            Pantone: 7481 C (aprox.)
+          </div>
+        </div>
+      </div>
+      <!-- Coral -->
+      <div class="swatch">
+        <div class="swatch__color" style="background: #FF6B6B;">
+          <span class="swatch__color-name">Coral Energía</span>
+        </div>
+        <div class="swatch__info">
+          <div class="swatch__hex">#FF6B6B</div>
+          <div class="swatch__values">
+            RGB: 255, 107, 107<br>
+            CMYK: 0, 58, 58, 0<br>
+            Pantone: 178 C (aprox.)
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="subsection">Colores Secundarios</h3>
+    <p class="body-text">Complementan la paleta primaria. El Arena/Beige se usa para fondos cálidos, y el Blanco para limpieza y espacio en el diseño.</p>
+
+    <div class="grid-2 mt-2" style="max-width:600px;">
+      <div class="swatch">
+        <div class="swatch__color" style="background: #F5E6CC;">
+          <span class="swatch__color-name" style="color:var(--acai); text-shadow:none;">Arena / Beige</span>
+        </div>
+        <div class="swatch__info">
+          <div class="swatch__hex">#F5E6CC</div>
+          <div class="swatch__values">
+            RGB: 245, 230, 204<br>
+            CMYK: 0, 6, 17, 4
+          </div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch__color" style="background: #FFFFFF; border: 1px solid var(--gray-light);">
+          <span class="swatch__color-name" style="color:var(--acai); text-shadow:none;">Blanco</span>
+        </div>
+        <div class="swatch__info">
+          <div class="swatch__hex">#FFFFFF</div>
+          <div class="swatch__values">
+            RGB: 255, 255, 255<br>
+            CMYK: 0, 0, 0, 0
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color Usage -->
+    <h3 class="subsection">Proporciones de Uso</h3>
+    <p class="body-text">La siguiente distribución guía cómo balancear los colores en cualquier pieza de comunicación.</p>
+
+    <div style="margin-top:1.5rem;">
+      <div style="display:flex; height:50px; border-radius:12px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+        <div style="width:40%; background:var(--acai); display:flex; align-items:center; justify-content:center; color:white; font-family:'Poppins',sans-serif; font-weight:600; font-size:0.75rem;">40%</div>
+        <div style="width:20%; background:var(--sand); display:flex; align-items:center; justify-content:center; color:var(--acai); font-family:'Poppins',sans-serif; font-weight:600; font-size:0.75rem;">20%</div>
+        <div style="width:20%; background:var(--white); display:flex; align-items:center; justify-content:center; color:var(--acai); font-family:'Poppins',sans-serif; font-weight:600; font-size:0.75rem; border-top:1px solid var(--gray-light); border-bottom:1px solid var(--gray-light);">20%</div>
+        <div style="width:12%; background:var(--green); display:flex; align-items:center; justify-content:center; color:white; font-family:'Poppins',sans-serif; font-weight:600; font-size:0.75rem;">12%</div>
+        <div style="width:8%; background:var(--coral); display:flex; align-items:center; justify-content:center; color:white; font-family:'Poppins',sans-serif; font-weight:600; font-size:0.75rem;">8%</div>
+      </div>
+      <div style="display:flex; margin-top:0.5rem;">
+        <div style="width:40%; text-align:center; font-size:0.7rem; color:var(--gray);">Morado Açaí</div>
+        <div style="width:20%; text-align:center; font-size:0.7rem; color:var(--gray);">Arena</div>
+        <div style="width:20%; text-align:center; font-size:0.7rem; color:var(--gray);">Blanco</div>
+        <div style="width:12%; text-align:center; font-size:0.7rem; color:var(--gray);">Verde</div>
+        <div style="width:8%; text-align:center; font-size:0.7rem; color:var(--gray);">Coral</div>
+      </div>
+    </div>
+
+    <!-- Combinations -->
+    <h3 class="subsection">Combinaciones Aprobadas</h3>
+    <div class="grid-4 mt-2">
+      <div style="border-radius:12px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.08);">
+        <div style="height:60px; background:var(--acai);"></div>
+        <div style="height:60px; background:var(--white); display:flex; align-items:center; justify-content:center;">
+          <span style="font-family:'Poppins',sans-serif; font-weight:700; font-size:0.8rem; color:var(--acai);">Texto en Morado</span>
+        </div>
+      </div>
+      <div style="border-radius:12px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.08);">
+        <div style="height:60px; background:var(--acai);"></div>
+        <div style="height:60px; background:var(--coral); display:flex; align-items:center; justify-content:center;">
+          <span style="font-family:'Poppins',sans-serif; font-weight:700; font-size:0.8rem; color:var(--white);">CTA en Coral</span>
+        </div>
+      </div>
+      <div style="border-radius:12px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.08);">
+        <div style="height:60px; background:var(--sand);"></div>
+        <div style="height:60px; background:var(--green); display:flex; align-items:center; justify-content:center;">
+          <span style="font-family:'Poppins',sans-serif; font-weight:700; font-size:0.8rem; color:var(--white);">Frescura</span>
+        </div>
+      </div>
+      <div style="border-radius:12px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.08);">
+        <div style="height:60px; background:var(--sand);"></div>
+        <div style="height:60px; background:var(--acai); display:flex; align-items:center; justify-content:center;">
+          <span style="font-family:'Poppins',sans-serif; font-weight:700; font-size:0.8rem; color:var(--sand);">Elegancia</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 05 — TYPOGRAPHY ========== -->
+  <section id="typography">
+    <div class="section-num">05 — Tipografía</div>
+    <h2 class="section-title">Tipografía</h2>
+    <p class="section-subtitle">Dos familias tipográficas que trabajan juntas para comunicar modernidad, accesibilidad y energía.</p>
+
+    <!-- Primary -->
+    <h3 class="subsection">Tipografía Principal — Poppins</h3>
+    <p class="body-text">
+      Poppins es la tipografía protagonista de la marca. Se usa para títulos, encabezados, logotipo, precios y todo elemento que requiera impacto visual. Su geometría redondeada transmite amabilidad y modernidad sin sacrificar legibilidad.
+    </p>
+
+    <div class="card mt-2">
+      <div class="type-display">
+        <div class="type-display__label">Light — 300</div>
+        <div class="type-display__sample" style="font-family:'Poppins',sans-serif; font-weight:300; font-size:2rem;">
+          Bondi Açaí — Energía Natural
+        </div>
+        <div class="type-display__meta"><code>font-family: 'Poppins'</code> <code>font-weight: 300</code></div>
+      </div>
+      <div class="type-display">
+        <div class="type-display__label">Regular — 400</div>
+        <div class="type-display__sample" style="font-family:'Poppins',sans-serif; font-weight:400; font-size:2rem;">
+          Bondi Açaí — Energía Natural
+        </div>
+        <div class="type-display__meta"><code>font-family: 'Poppins'</code> <code>font-weight: 400</code></div>
+      </div>
+      <div class="type-display">
+        <div class="type-display__label">SemiBold — 600</div>
+        <div class="type-display__sample" style="font-family:'Poppins',sans-serif; font-weight:600; font-size:2rem;">
+          Bondi Açaí — Energía Natural
+        </div>
+        <div class="type-display__meta"><code>font-family: 'Poppins'</code> <code>font-weight: 600</code></div>
+      </div>
+      <div class="type-display">
+        <div class="type-display__label">Bold — 700</div>
+        <div class="type-display__sample" style="font-family:'Poppins',sans-serif; font-weight:700; font-size:2rem;">
+          Bondi Açaí — Energía Natural
+        </div>
+        <div class="type-display__meta"><code>font-family: 'Poppins'</code> <code>font-weight: 700</code></div>
+      </div>
+      <div class="type-display">
+        <div class="type-display__label">Black — 900</div>
+        <div class="type-display__sample" style="font-family:'Poppins',sans-serif; font-weight:900; font-size:2rem;">
+          Bondi Açaí — Energía Natural
+        </div>
+        <div class="type-display__meta"><code>font-family: 'Poppins'</code> <code>font-weight: 900</code> — Uso exclusivo en logotipo</div>
+      </div>
+    </div>
+
+    <!-- Secondary -->
+    <h3 class="subsection">Tipografía Secundaria — Inter</h3>
+    <p class="body-text">
+      Inter se usa para cuerpo de texto, descripciones, ingredientes del menú y todo contenido extenso. Fue diseñada específicamente para pantallas, lo que la hace ideal para materiales digitales y físicos.
+    </p>
+
+    <div class="card mt-2">
+      <div class="type-display">
+        <div class="type-display__label">Regular — 400</div>
+        <div class="type-display__sample" style="font-family:'Inter',sans-serif; font-weight:400; font-size:1.1rem; line-height:1.8;">
+          Bondi Açaí ofrece bowls de açaí, smoothies y bebidas naturales preparados con ingredientes reales y de calidad, en un ambiente fresco y moderno, a precios accesibles para Barrancabermeja.
+        </div>
+        <div class="type-display__meta"><code>font-family: 'Inter'</code> <code>font-weight: 400</code></div>
+      </div>
+      <div class="type-display">
+        <div class="type-display__label">Medium — 500</div>
+        <div class="type-display__sample" style="font-family:'Inter',sans-serif; font-weight:500; font-size:1.1rem; line-height:1.8;">
+          Ingredientes reales. Fruta de verdad. Pulpa de açaí genuina.
+        </div>
+        <div class="type-display__meta"><code>font-family: 'Inter'</code> <code>font-weight: 500</code></div>
+      </div>
+      <div class="type-display">
+        <div class="type-display__label">SemiBold — 600</div>
+        <div class="type-display__sample" style="font-family:'Inter',sans-serif; font-weight:600; font-size:1.1rem; line-height:1.8;">
+          Açaí Bowl Clásico — $22.900 COP
+        </div>
+        <div class="type-display__meta"><code>font-family: 'Inter'</code> <code>font-weight: 600</code> — Para precios y datos destacados</div>
+      </div>
+    </div>
+
+    <!-- Alternative -->
+    <h3 class="subsection">Alternativa — Nunito</h3>
+    <p class="body-text">
+      Nunito puede sustituir a Poppins en contextos donde esta no esté disponible. Comparte la geometría redondeada y la personalidad amigable, pero tiene un carácter ligeramente más informal.
+    </p>
+    <div class="card mt-2">
+      <div class="type-display">
+        <div class="type-display__label">Ejemplo en Nunito Bold</div>
+        <div class="type-display__sample" style="font-family:'Nunito',sans-serif; font-weight:700; font-size:1.8rem;">
+          Bondi Açaí — Tu Dosis de Energía
+        </div>
+        <div class="type-display__meta"><code>font-family: 'Nunito'</code> — Uso como fallback de Poppins</div>
+      </div>
+    </div>
+
+    <!-- Hierarchy -->
+    <h3 class="subsection">Jerarquía Tipográfica</h3>
+    <table class="hierarchy-table">
+      <thead>
+        <tr>
+          <th>Elemento</th>
+          <th>Fuente / Peso</th>
+          <th style="min-width:200px;">Ejemplo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>H1 — Título principal</td>
+          <td>Poppins Bold 700, 2.5rem</td>
+          <td style="font-family:'Poppins',sans-serif; font-weight:700; font-size:1.5rem; color:var(--acai);">Energía Natural</td>
+        </tr>
+        <tr>
+          <td>H2 — Subtítulo</td>
+          <td>Poppins SemiBold 600, 1.75rem</td>
+          <td style="font-family:'Poppins',sans-serif; font-weight:600; font-size:1.25rem; color:var(--acai);">Nuestros Bowls</td>
+        </tr>
+        <tr>
+          <td>H3 — Sección</td>
+          <td>Poppins SemiBold 600, 1.25rem</td>
+          <td style="font-family:'Poppins',sans-serif; font-weight:600; font-size:1rem; color:var(--acai);">Clásico Bondi</td>
+        </tr>
+        <tr>
+          <td>Cuerpo</td>
+          <td>Inter Regular 400, 1rem</td>
+          <td style="font-family:'Inter',sans-serif; font-weight:400; font-size:0.9rem;">Açaí cremoso con banano y granola.</td>
+        </tr>
+        <tr>
+          <td>Precio</td>
+          <td>Poppins Bold 700, 1.1rem</td>
+          <td style="font-family:'Poppins',sans-serif; font-weight:700; font-size:1rem; color:var(--coral);">$22.900</td>
+        </tr>
+        <tr>
+          <td>Caption / Meta</td>
+          <td>Inter Regular 400, 0.8rem</td>
+          <td style="font-family:'Inter',sans-serif; font-weight:400; font-size:0.78rem; color:var(--gray);">Incluye granola artesanal</td>
+        </tr>
+        <tr>
+          <td>Etiqueta / Badge</td>
+          <td>Poppins SemiBold 600, 0.7rem, UPPERCASE</td>
+          <td><span class="badge badge--green">NUEVO</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ========== 06 — VISUAL ELEMENTS ========== -->
+  <section id="visuals">
+    <div class="section-num">06 — Elementos Visuales</div>
+    <h2 class="section-title">Elementos Gráficos</h2>
+    <p class="section-subtitle">Recursos gráficos recurrentes que refuerzan la identidad y crean coherencia visual.</p>
+
+    <!-- Waves -->
+    <h3 class="subsection">Olas Estilizadas</h3>
+    <p class="body-text">
+      Las olas son el elemento gráfico signature de Bondi Açaí. Hacen referencia directa a Bondi Beach y el estilo de vida costero. Se usan como separadores, fondos decorativos, bordes de empaques y transiciones en contenido digital.
+    </p>
+
+    <div class="grid-2 mt-2">
+      <div>
+        <div class="pattern-strip" style="background: var(--acai);">
+          <svg viewBox="0 0 400 80" preserveAspectRatio="none" style="position:absolute; top:0; left:0; width:100%; height:100%;">
+            <path d="M0,30 C100,60 150,10 200,40 C250,70 300,20 400,50 L400,80 L0,80 Z" fill="rgba(255,255,255,0.1)"/>
+            <path d="M0,50 C80,20 160,60 240,35 C320,10 360,55 400,40 L400,80 L0,80 Z" fill="rgba(255,255,255,0.07)"/>
+          </svg>
+          <span class="pattern-strip__label">Olas sobre Morado</span>
+        </div>
+      </div>
+      <div>
+        <div class="pattern-strip" style="background: var(--sand);">
+          <svg viewBox="0 0 400 80" preserveAspectRatio="none" style="position:absolute; top:0; left:0; width:100%; height:100%;">
+            <path d="M0,30 C100,60 150,10 200,40 C250,70 300,20 400,50 L400,80 L0,80 Z" fill="rgba(91,44,111,0.08)"/>
+            <path d="M0,50 C80,20 160,60 240,35 C320,10 360,55 400,40 L400,80 L0,80 Z" fill="rgba(91,44,111,0.05)"/>
+          </svg>
+          <span class="pattern-strip__label" style="color:var(--acai); text-shadow:none;">Olas sobre Arena</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Icons & Illustrations -->
+    <h3 class="subsection">Iconografía</h3>
+    <p class="body-text">
+      Se utilizan íconos minimalistas de línea para representar ingredientes, categorías del menú y elementos de comunicación. El estilo es redondeado, coherente con la tipografía Poppins.
+    </p>
+
+    <div class="grid-5 mt-2">
+      <div class="visual-box" style="background:var(--sand-light); border:1px solid var(--sand);">
+        <div style="font-size:2.5rem;">&#127827;</div>
+        <div class="visual-box__label" style="color:var(--acai);">Frutas</div>
+        <div class="visual-box__desc">Toppings y bases</div>
+      </div>
+      <div class="visual-box" style="background:var(--sand-light); border:1px solid var(--sand);">
+        <div style="font-size:2.5rem;">&#127846;</div>
+        <div class="visual-box__label" style="color:var(--acai);">Bowls</div>
+        <div class="visual-box__desc">Producto principal</div>
+      </div>
+      <div class="visual-box" style="background:var(--sand-light); border:1px solid var(--sand);">
+        <div style="font-size:2.5rem;">&#127802;</div>
+        <div class="visual-box__label" style="color:var(--acai);">Hojas</div>
+        <div class="visual-box__desc">Naturaleza, frescura</div>
+      </div>
+      <div class="visual-box" style="background:var(--sand-light); border:1px solid var(--sand);">
+        <div style="font-size:2.5rem;">&#127754;</div>
+        <div class="visual-box__label" style="color:var(--acai);">Olas</div>
+        <div class="visual-box__desc">Bondi Beach, energía</div>
+      </div>
+      <div class="visual-box" style="background:var(--sand-light); border:1px solid var(--sand);">
+        <div style="font-size:2.5rem;">&#9889;</div>
+        <div class="visual-box__label" style="color:var(--acai);">Energía</div>
+        <div class="visual-box__desc">Vitalidad, acción</div>
+      </div>
+    </div>
+
+    <!-- Patterns -->
+    <h3 class="subsection">Patrones de Marca</h3>
+    <p class="body-text">
+      Los patrones se usan como texturas de fondo en empaques, redes sociales y materiales impresos. Siempre deben ser sutiles — nunca competir con el contenido principal.
+    </p>
+
+    <div class="grid-3 mt-2">
+      <div class="card" style="text-align:center; padding:2rem;">
+        <div style="font-size:1.5rem; letter-spacing:0.5rem; opacity:0.3; line-height:2;">
+          &#127754; &#127754; &#127754;<br>
+          &#127754; &#127754; &#127754;<br>
+          &#127754; &#127754; &#127754;
+        </div>
+        <div style="font-family:'Poppins',sans-serif; font-weight:600; font-size:0.8rem; color:var(--acai); margin-top:1rem;">Patrón de Olas</div>
+        <div style="font-size:0.75rem; color:var(--gray);">Empaques, bolsas, fondos</div>
+      </div>
+      <div class="card" style="text-align:center; padding:2rem;">
+        <div style="font-size:1.5rem; letter-spacing:0.5rem; opacity:0.3; line-height:2;">
+          &#127807; &#127811; &#127807;<br>
+          &#127811; &#127807; &#127811;<br>
+          &#127807; &#127811; &#127807;
+        </div>
+        <div style="font-family:'Poppins',sans-serif; font-weight:600; font-size:0.8rem; color:var(--acai); margin-top:1rem;">Patrón Tropical</div>
+        <div style="font-size:0.75rem; color:var(--gray);">Servilletas, fondos web</div>
+      </div>
+      <div class="card" style="text-align:center; padding:2rem;">
+        <div style="font-size:1.5rem; letter-spacing:0.5rem; opacity:0.3; line-height:2;">
+          &#127815; &#127827; &#127820;<br>
+          &#127820; &#127815; &#127827;<br>
+          &#127827; &#127820; &#127815;
+        </div>
+        <div style="font-family:'Poppins',sans-serif; font-weight:600; font-size:0.8rem; color:var(--acai); margin-top:1rem;">Patrón de Frutas</div>
+        <div style="font-size:0.75rem; color:var(--gray);">Stories, material POP</div>
+      </div>
+    </div>
+
+    <!-- Shapes -->
+    <h3 class="subsection">Formas y Bordes</h3>
+    <p class="body-text">
+      La marca usa bordes redondeados consistentemente. Las formas afiladas y esquinas rectas no son coherentes con la personalidad de Bondi Açaí.
+    </p>
+    <div class="grid-4 mt-2">
+      <div style="text-align:center;">
+        <div style="width:80px; height:80px; background:var(--acai); border-radius:16px; margin:0 auto;"></div>
+        <div style="font-size:0.75rem; color:var(--gray); margin-top:0.5rem;">border-radius: 16px</div>
+        <div style="font-size:0.7rem; color:var(--green); font-weight:600;">Correcto</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:80px; height:80px; background:var(--acai); border-radius:50%; margin:0 auto;"></div>
+        <div style="font-size:0.75rem; color:var(--gray); margin-top:0.5rem;">border-radius: 50%</div>
+        <div style="font-size:0.7rem; color:var(--green); font-weight:600;">Correcto</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:80px; height:80px; background:var(--acai); border-radius:40px; margin:0 auto;"></div>
+        <div style="font-size:0.75rem; color:var(--gray); margin-top:0.5rem;">border-radius: 40px</div>
+        <div style="font-size:0.7rem; color:var(--green); font-weight:600;">Correcto</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:80px; height:80px; background:var(--gray-light); border-radius:0; margin:0 auto; border:2px dashed var(--coral);"></div>
+        <div style="font-size:0.75rem; color:var(--gray); margin-top:0.5rem;">border-radius: 0</div>
+        <div style="font-size:0.7rem; color:var(--coral); font-weight:600;">Evitar</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 07 — PHOTOGRAPHY ========== -->
+  <section id="photography">
+    <div class="section-num">07 — Fotografía</div>
+    <h2 class="section-title">Estilo Fotográfico</h2>
+    <p class="section-subtitle">La fotografía es el canal principal para comunicar el producto. Debe ser consistente, vibrante y apetitosa.</p>
+
+    <h3 class="subsection">Principios Fotográficos</h3>
+    <div class="grid-3 mt-2">
+      <div class="card">
+        <div class="card__title">Luz Natural</div>
+        <div class="card__text">Siempre priorizar la luz natural. Fotografiar junto a ventanas grandes. La luz artificial solo como complemento, nunca como fuente principal. Buscar la "hora dorada" para exteriores.</div>
+      </div>
+      <div class="card">
+        <div class="card__title">Colores Vibrantes</div>
+        <div class="card__text">Los colores del producto deben ser fieles pero saturados. El morado del açaí, los verdes de los toppings y los tonos de las frutas deben "saltar" de la imagen. Sin filtros fríos ni desaturados.</div>
+      </div>
+      <div class="card">
+        <div class="card__title">Texturas Visibles</div>
+        <div class="card__text">Las texturas son clave: la granola crujiente, la cremosidad del açaí, las gotas de miel. Acercar el lente lo suficiente para que el espectador "sienta" la textura.</div>
+      </div>
+    </div>
+
+    <h3 class="subsection">Ángulos y Composición</h3>
+    <div class="photo-guide">
+      <div class="photo-guide__item">
+        <div class="photo-guide__preview" style="background: linear-gradient(135deg, var(--acai), var(--acai-light));">
+          <span style="color:white; font-size:0.9rem; font-family:'Poppins',sans-serif; font-weight:600;">90°</span>
+        </div>
+        <div class="photo-guide__info">
+          <div class="photo-guide__title">Cenital (Top-Down)</div>
+          <div class="photo-guide__desc">El ángulo principal para bowls. Muestra todos los toppings en su máxima expresión. Ideal para feed de Instagram.</div>
+        </div>
+      </div>
+      <div class="photo-guide__item">
+        <div class="photo-guide__preview" style="background: linear-gradient(135deg, var(--green), var(--green-light));">
+          <span style="color:white; font-size:0.9rem; font-family:'Poppins',sans-serif; font-weight:600;">45°</span>
+        </div>
+        <div class="photo-guide__info">
+          <div class="photo-guide__title">Tres Cuartos</div>
+          <div class="photo-guide__desc">Muestra profundidad y volumen. Ideal para smoothies, vasos y para mostrar el ambiente del local de fondo.</div>
+        </div>
+      </div>
+      <div class="photo-guide__item">
+        <div class="photo-guide__preview" style="background: linear-gradient(135deg, var(--coral), var(--coral-light));">
+          <span style="color:white; font-size:0.9rem; font-family:'Poppins',sans-serif; font-weight:600;">0°</span>
+        </div>
+        <div class="photo-guide__info">
+          <div class="photo-guide__title">Frontal</div>
+          <div class="photo-guide__desc">Para mostrar empaques, vasos branded y presentaciones de delivery. Útil para catálogo de WhatsApp.</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="subsection">Props y Estilismo</h3>
+    <p class="body-text">Cada foto debe sentirse como parte del universo Bondi Açaí. Los elementos que rodean al producto refuerzan la narrativa.</p>
+    <div class="grid-2 mt-2">
+      <div>
+        <div class="do-dont__header do-dont__header--do">&#10003; Props Aprobados</div>
+        <ul class="do-dont__list">
+          <li>Frutas frescas enteras o cortadas alrededor del bowl</li>
+          <li>Cucharas de madera o bambú</li>
+          <li>Superficies de madera clara, mármol blanco, concreto claro</li>
+          <li>Hojas tropicales (monstera, palmera)</li>
+          <li>Servilletas de lino natural</li>
+          <li>Manos sosteniendo el producto (cercanía humana)</li>
+          <li>Gotas de condensación en vasos (frescura)</li>
+        </ul>
+      </div>
+      <div>
+        <div class="do-dont__header do-dont__header--dont">&#10007; Evitar</div>
+        <ul class="do-dont__list">
+          <li>Fondos desordenados o sucios</li>
+          <li>Utensilios de plástico o desechables baratos</li>
+          <li>Superficies oscuras o fondos negros</li>
+          <li>Filtros fríos, grises o desaturados</li>
+          <li>Fotos borrosas o con poca luz</li>
+          <li>Elementos que no se relacionen con la marca</li>
+          <li>Composiciones recargadas que distraigan del producto</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Editing -->
+    <h3 class="subsection">Edición y Postproducción</h3>
+    <div class="grid-3 mt-2">
+      <div class="card">
+        <div class="card__title">Brillo y Exposición</div>
+        <div class="card__text">Imágenes luminosas, bien expuestas. Aumentar brillo ligeramente si es necesario. Evitar fotos oscuras o subexpuestas.</div>
+      </div>
+      <div class="card">
+        <div class="card__title">Saturación</div>
+        <div class="card__text">Saturación cálida moderada (+10-15%). Los morados, verdes y rojos deben verse vibrantes pero naturales. No exagerar.</div>
+      </div>
+      <div class="card">
+        <div class="card__title">Consistencia del Feed</div>
+        <div class="card__text">Usar el mismo preset o estilo de edición en todas las fotos. El feed de Instagram debe sentirse como una sola historia visual.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 08 — VOICE & TONE ========== -->
+  <section id="voice">
+    <div class="section-num">08 — Voz y Tono</div>
+    <h2 class="section-title">Voz y Tono de Marca</h2>
+    <p class="section-subtitle">Cómo suena Bondi Açaí — la personalidad detrás de cada palabra.</p>
+
+    <h3 class="subsection">Personalidad de Marca</h3>
+    <p class="body-text">La voz de Bondi Açaí se sitúa en puntos específicos de estos espectros. Estos deben guiar toda la comunicación escrita y verbal.</p>
+
+    <div class="card mt-2">
+      <div class="personality">
+        <div class="personality__bar-container">
+          <div class="personality__label">Formal</div>
+          <div class="personality__bar">
+            <div class="personality__bar-fill" style="width: 25%;"></div>
+          </div>
+          <div class="personality__label-end">Casual</div>
+        </div>
+      </div>
+      <div class="personality">
+        <div class="personality__bar-container">
+          <div class="personality__label">Serio</div>
+          <div class="personality__bar">
+            <div class="personality__bar-fill" style="width: 70%;"></div>
+          </div>
+          <div class="personality__label-end">Divertido</div>
+        </div>
+      </div>
+      <div class="personality">
+        <div class="personality__bar-container">
+          <div class="personality__label">Corporativo</div>
+          <div class="personality__bar">
+            <div class="personality__bar-fill" style="width: 80%;"></div>
+          </div>
+          <div class="personality__label-end">Cercano</div>
+        </div>
+      </div>
+      <div class="personality">
+        <div class="personality__bar-container">
+          <div class="personality__label">Técnico</div>
+          <div class="personality__bar">
+            <div class="personality__bar-fill" style="width: 20%;"></div>
+          </div>
+          <div class="personality__label-end">Simple</div>
+        </div>
+      </div>
+      <div class="personality">
+        <div class="personality__bar-container">
+          <div class="personality__label">Tradicional</div>
+          <div class="personality__bar">
+            <div class="personality__bar-fill" style="width: 75%;"></div>
+          </div>
+          <div class="personality__label-end">Moderno</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Attributes -->
+    <h3 class="subsection">Atributos de Voz</h3>
+    <div class="grid-4 mt-2">
+      <div class="card" style="border-left:4px solid var(--acai);">
+        <div class="card__title">Fresca</div>
+        <div class="card__text">Como el producto — ligera, energética y natural. Nada rebuscado ni pesado.</div>
+      </div>
+      <div class="card" style="border-left:4px solid var(--green);">
+        <div class="card__title">Cercana</div>
+        <div class="card__text">Hablamos como un amigo, no como una corporación. Tuteo natural, emojis con moderación.</div>
+      </div>
+      <div class="card" style="border-left:4px solid var(--coral);">
+        <div class="card__title">Entusiasta</div>
+        <div class="card__text">Transmitimos pasión genuina por lo que hacemos. Sin exagerar — auténtico, no hype vacío.</div>
+      </div>
+      <div class="card" style="border-left:4px solid var(--sand);">
+        <div class="card__title">Transparente</div>
+        <div class="card__text">Decimos las cosas como son. Ingredientes reales, precios claros, sin letra pequeña.</div>
+      </div>
+    </div>
+
+    <!-- Tone Examples -->
+    <h3 class="subsection">Ejemplos de Tono por Canal</h3>
+
+    <div class="tone-example">
+      <div class="tone-example__card" style="background:#F3E8FF;">
+        <div class="tone-example__label" style="color:var(--acai);">Instagram Caption</div>
+        <div class="tone-example__text" style="color:var(--acai-dark);">
+          "Tu Clásico Bondi te espera. Açaí cremoso + banano + granola artesanal + un toque de miel. Simple, perfecto, adictivo. &#127803;<br><br>Pedidos por WhatsApp &#128172; link en bio."
+        </div>
+      </div>
+      <div class="tone-example__card" style="background:#ECFDF5;">
+        <div class="tone-example__label" style="color:#065F46;">WhatsApp Business</div>
+        <div class="tone-example__text" style="color:#065F46;">
+          "Hola! &#128075; Bienvenid@ a Bondi Açaí. Mirá nuestro menú completo en el catálogo. Para pedir, escribinos el nombre del bowl + tamaño + dirección. Listo en 20 min! &#128640;"
+        </div>
+      </div>
+    </div>
+
+    <div class="tone-example mt-2">
+      <div class="tone-example__card" style="background:#FEF2F2;">
+        <div class="tone-example__label" style="color:#991B1B;">Respuesta a Reseña Negativa</div>
+        <div class="tone-example__text" style="color:#991B1B;">
+          "Hola [nombre], lamentamos mucho tu experiencia. Esto no es lo que queremos para nuestros clientes. Ya identificamos qué pasó y estamos tomando medidas. ¿Podés escribirnos al WhatsApp para resolverlo directamente?"
+        </div>
+      </div>
+      <div class="tone-example__card" style="background:var(--sand-light);">
+        <div class="tone-example__label" style="color:var(--acai);">Menú / Descripción de Producto</div>
+        <div class="tone-example__text" style="color:var(--acai-dark);">
+          "Tropical — Explosión de playa: açaí con la dulzura del mango, la frescura de la piña y la textura del coco rallado. Transportate al mar con cada cucharada."
+        </div>
+      </div>
+    </div>
+
+    <!-- Do/Don't -->
+    <h3 class="subsection">Guía de Comunicación</h3>
+    <div class="do-dont">
+      <div class="do-dont__col">
+        <div class="do-dont__header do-dont__header--do">&#10003; Sí hacemos</div>
+        <ul class="do-dont__list">
+          <li>Hablar en primera persona plural ("nosotros", "en Bondi")</li>
+          <li>Tutear al cliente (vos/tú según la región)</li>
+          <li>Usar lenguaje positivo y propositivo</li>
+          <li>Mencionar ingredientes reales y específicos</li>
+          <li>Celebrar al cliente y a la comunidad</li>
+          <li>Ser directos y concisos</li>
+          <li>Adaptar el humor al contexto local</li>
+        </ul>
+      </div>
+      <div class="do-dont__col">
+        <div class="do-dont__header do-dont__header--dont">&#10007; No hacemos</div>
+        <ul class="do-dont__list">
+          <li>Hablar de forma corporativa o distante</li>
+          <li>Usar jerga técnica nutricional sin explicar</li>
+          <li>Hacer claims de salud no verificables</li>
+          <li>Hablar mal de la competencia</li>
+          <li>Usar humor agresivo o sarcástico</li>
+          <li>Exagerar con superlativos vacíos ("el mejor del mundo")</li>
+          <li>Ignorar mensajes o comentarios negativos</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 09 — APPLICATIONS ========== -->
+  <section id="applications">
+    <div class="section-num">09 — Aplicaciones</div>
+    <h2 class="section-title">Aplicaciones de Marca</h2>
+    <p class="section-subtitle">Cómo vive la marca en cada punto de contacto con el cliente.</p>
+
+    <!-- Packaging -->
+    <h3 class="subsection">Empaque y Packaging</h3>
+    <p class="body-text">
+      Cada pieza de empaque es una oportunidad de branding. El empaque de Bondi Açaí debe sentirse premium sin ser ostentoso — limpio, con el logo visible y materiales coherentes con los valores de la marca.
+    </p>
+
+    <div class="grid-4 mt-2">
+      <div style="text-align:center;">
+        <div class="cup-mockup" style="background: linear-gradient(180deg, var(--acai) 0%, var(--acai-dark) 100%);">
+          <div class="cup-mockup__name">BONDI</div>
+          <div class="cup-mockup__tagline">Açaí</div>
+        </div>
+        <div style="font-family:'Poppins',sans-serif; font-weight:600; font-size:0.8rem; color:var(--acai); margin-top:1rem;">Vaso Smoothie</div>
+        <div style="font-size:0.73rem; color:var(--gray);">Logo centrado, fondo morado</div>
+      </div>
+      <div style="text-align:center;">
+        <div class="cup-mockup" style="background: linear-gradient(180deg, var(--coral) 0%, #E55A5A 100%); border-radius:50% 50% 20px 20px;">
+          <div class="cup-mockup__name">BONDI</div>
+          <div class="cup-mockup__tagline">Açaí</div>
+        </div>
+        <div style="font-family:'Poppins',sans-serif; font-weight:600; font-size:0.8rem; color:var(--acai); margin-top:1rem;">Bowl para Llevar</div>
+        <div style="font-size:0.73rem; color:var(--gray);">Logo en tapa, lateral morado</div>
+      </div>
+      <div style="text-align:center;">
+        <div class="cup-mockup" style="background: #C8A97E; border-radius:4px;">
+          <div class="cup-mockup__name" style="font-size:0.9rem;">BONDI</div>
+          <div class="cup-mockup__tagline">Energía Natural</div>
+        </div>
+        <div style="font-family:'Poppins',sans-serif; font-weight:600; font-size:0.8rem; color:var(--acai); margin-top:1rem;">Bolsa Kraft</div>
+        <div style="font-size:0.73rem; color:var(--gray);">Papel kraft + sello morado</div>
+      </div>
+      <div style="text-align:center;">
+        <div class="cup-mockup" style="background: var(--white); border:2px solid var(--acai); border-radius:50%;">
+          <div class="cup-mockup__name" style="color:var(--acai); font-size:0.9rem;">BONDI</div>
+          <div class="cup-mockup__tagline" style="color:var(--coral);">AÇAÍ</div>
+        </div>
+        <div style="font-family:'Poppins',sans-serif; font-weight:600; font-size:0.8rem; color:var(--acai); margin-top:1rem;">Sticker</div>
+        <div style="font-size:0.73rem; color:var(--gray);">Circular, para sellar y regalar</div>
+      </div>
+    </div>
+
+    <!-- Uniforms -->
+    <h3 class="subsection">Uniformes</h3>
+    <div class="grid-3 mt-2">
+      <div class="card" style="text-align:center;">
+        <div style="width:100px; height:120px; margin:0 auto; background:var(--acai); border-radius:12px; display:flex; align-items:center; justify-content:center;">
+          <div>
+            <div style="font-family:'Poppins',sans-serif; font-weight:800; font-size:0.9rem; color:var(--white);">BONDI</div>
+            <div style="font-family:'Poppins',sans-serif; font-weight:800; font-size:0.5rem; color:var(--coral); letter-spacing:0.1em;">AÇAÍ</div>
+          </div>
+        </div>
+        <div class="card__title mt-1">Camiseta</div>
+        <div class="card__text">Algodón morado açaí con logo blanco/coral en pecho. Cómoda, transpirable.</div>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div style="width:100px; height:120px; margin:0 auto; background:var(--sand); border-radius:12px; display:flex; align-items:center; justify-content:center;">
+          <div>
+            <div style="font-family:'Poppins',sans-serif; font-weight:800; font-size:0.9rem; color:var(--acai);">BONDI</div>
+            <div style="font-family:'Poppins',sans-serif; font-weight:800; font-size:0.5rem; color:var(--coral); letter-spacing:0.1em;">AÇAÍ</div>
+          </div>
+        </div>
+        <div class="card__title mt-1">Delantal</div>
+        <div class="card__text">Canvas beige con logo bordado. Práctico para la preparación diaria.</div>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div style="width:100px; height:60px; margin:0 auto; background:var(--dark); border-radius:8px; display:flex; align-items:center; justify-content:center;">
+          <div>
+            <div style="font-family:'Poppins',sans-serif; font-weight:800; font-size:0.65rem; color:var(--white);">BONDI</div>
+            <div style="font-family:'Inter',sans-serif; font-size:0.4rem; color:var(--gray);">Juan — Bowl Maker</div>
+          </div>
+        </div>
+        <div class="card__title mt-1">Gorra / Gafete</div>
+        <div class="card__text">Gorra negra con logo bordado. Gafete con nombre y rol.</div>
+      </div>
+    </div>
+
+    <!-- Signage -->
+    <h3 class="subsection">Señalización del Local</h3>
+    <div class="grid-2 mt-2">
+      <div class="card">
+        <div class="card__title">Letrero Exterior</div>
+        <div class="card__text">Letrero luminoso tipo caja de luz o letras corpóreas retroiluminadas con el logo principal. Fondo morado açaí, letras blancas con "AÇAÍ" en coral. Visible de día y de noche. Dimensiones sugeridas: 200cm x 60cm.</div>
+      </div>
+      <div class="card">
+        <div class="card__title">Menú en Pared</div>
+        <div class="card__text">Panel en la pared posterior al mostrador. Fondo arena/beige con tipografía Poppins. Categorías en morado, precios en coral. Debe ser legible a 3 metros de distancia. Incluir fotografías de los 3 bowls principales.</div>
+      </div>
+      <div class="card">
+        <div class="card__title">Muro Instagrameable</div>
+        <div class="card__text">Pared lateral con fondo de color sólido (morado açaí o arena), letrero de neón con el tagline "Energía Natural" u olas estilizadas. Diseñado para que los clientes se tomen fotos y publiquen en redes.</div>
+      </div>
+      <div class="card">
+        <div class="card__title">Mostrador y Vitrina</div>
+        <div class="card__text">Exhibición de toppings en recipientes de vidrio con etiquetas en tipografía Poppins. Logo en la parte frontal del mostrador. Limpio, ordenado, visualmente apetitoso.</div>
+      </div>
+    </div>
+
+    <!-- Digital -->
+    <h3 class="subsection">Materiales Digitales</h3>
+    <div class="grid-3 mt-2">
+      <div class="card">
+        <div class="card__title">Menú Digital (WhatsApp)</div>
+        <div class="card__text">Catálogo de WhatsApp Business con fotos cenitales profesionales de cada producto. Descripción breve, precio visible, código de colores por categoría.</div>
+      </div>
+      <div class="card">
+        <div class="card__title">Google My Business</div>
+        <div class="card__text">Perfil verificado como "Bondi Açaí — Bowls & Smoothies". Mínimo 10 fotos profesionales al abrir. Información de contacto y horarios siempre actualizados.</div>
+      </div>
+      <div class="card">
+        <div class="card__title">Stickers Digitales</div>
+        <div class="card__text">Pack de stickers para WhatsApp con el logo, expresiones de marca ("Pura energía!", "Bowl time!") y elementos ilustrados de frutas y olas.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 10 — SOCIAL MEDIA ========== -->
+  <section id="social">
+    <div class="section-num">10 — Redes Sociales</div>
+    <h2 class="section-title">Redes Sociales</h2>
+    <p class="section-subtitle">Guía visual y de contenido para mantener la coherencia de marca en plataformas digitales.</p>
+
+    <!-- Profile Setup -->
+    <h3 class="subsection">Configuración de Perfiles</h3>
+    <div class="grid-2 mt-2">
+      <div class="card">
+        <div class="card__title">Instagram</div>
+        <div class="card__text">
+          <strong>Nombre:</strong> Bondi Açaí<br>
+          <strong>Username:</strong> @bondiacai<br>
+          <strong>Bio:</strong> "Açaí bowls & smoothies en Barrancabermeja | Energía natural | Pedidos: [link WhatsApp]"<br>
+          <strong>Foto de perfil:</strong> Logo circular sobre fondo morado<br>
+          <strong>Highlights:</strong> Menú, Proceso, Reseñas, Ubicación, Promo del Mes
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__title">TikTok</div>
+        <div class="card__text">
+          <strong>Nombre:</strong> Bondi Açaí<br>
+          <strong>Username:</strong> @bondiacai<br>
+          <strong>Bio:</strong> "Hacemos los bowls más bonitos de Barranca"<br>
+          <strong>Foto de perfil:</strong> Mismo logo circular<br>
+          <strong>Link:</strong> WhatsApp o menú digital
+        </div>
+      </div>
+    </div>
+
+    <!-- Post Mockup -->
+    <h3 class="subsection">Ejemplo de Post</h3>
+    <div class="grid-2 mt-2">
+      <div class="social-post">
+        <div class="social-post__header">
+          <div class="social-post__avatar">BA</div>
+          <div class="social-post__username">bondiacai</div>
+        </div>
+        <div class="social-post__image" style="background: linear-gradient(180deg, var(--acai) 0%, var(--acai-light) 50%, var(--sand) 100%);">
+          <div style="text-align:center; color:white;">
+            <div style="font-family:'Poppins',sans-serif; font-weight:800; font-size:1.8rem;">CLÁSICO</div>
+            <div style="font-family:'Poppins',sans-serif; font-weight:800; font-size:1.8rem; color:var(--coral);">BONDI</div>
+            <div style="font-family:'Inter',sans-serif; font-size:0.8rem; opacity:0.7; margin-top:0.5rem;">Açaí + Banano + Granola + Miel</div>
+            <div style="font-family:'Poppins',sans-serif; font-weight:700; font-size:1.5rem; color:var(--coral); margin-top:1rem;">$22.900</div>
+          </div>
+        </div>
+        <div class="social-post__caption">
+          <strong>bondiacai</strong> Tu Clásico Bondi te espera. Açaí cremoso + banano + granola artesanal + un toque de miel. Simple, perfecto, adictivo.<br><br>
+          #BondiAcai #AcaiBowl #Barrancabermeja
+        </div>
+      </div>
+
+      <div>
+        <div class="card mb-2">
+          <div class="card__title">Regla de Contenido 70-20-10</div>
+          <div style="margin-top:1rem;">
+            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+              <div style="width:50px; height:50px; background:var(--acai); border-radius:10px; display:flex; align-items:center; justify-content:center; color:white; font-family:'Poppins',sans-serif; font-weight:700; font-size:0.8rem;">70%</div>
+              <div>
+                <div style="font-family:'Poppins',sans-serif; font-weight:600; font-size:0.85rem; color:var(--acai);">Entretenimiento y Valor</div>
+                <div style="font-size:0.78rem; color:var(--gray);">Videos de preparación, datos del açaí, tips, ASMR</div>
+              </div>
+            </div>
+            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+              <div style="width:50px; height:50px; background:var(--green); border-radius:10px; display:flex; align-items:center; justify-content:center; color:white; font-family:'Poppins',sans-serif; font-weight:700; font-size:0.8rem;">20%</div>
+              <div>
+                <div style="font-family:'Poppins',sans-serif; font-weight:600; font-size:0.85rem; color:var(--acai);">Comunidad</div>
+                <div style="font-size:0.78rem; color:var(--gray);">Repost de clientes, encuestas, UGC, preguntas</div>
+              </div>
+            </div>
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <div style="width:50px; height:50px; background:var(--coral); border-radius:10px; display:flex; align-items:center; justify-content:center; color:white; font-family:'Poppins',sans-serif; font-weight:700; font-size:0.8rem;">10%</div>
+              <div>
+                <div style="font-family:'Poppins',sans-serif; font-weight:600; font-size:0.85rem; color:var(--acai);">Venta Directa</div>
+                <div style="font-size:0.78rem; color:var(--gray);">Promociones, nuevos productos, precios, lanzamientos</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__title">Hashtags de Marca</div>
+          <div style="margin-top:0.75rem;">
+            <span class="badge badge--primary">#BondiAcai</span>
+            <span class="badge badge--primary">#BondiEnergiaNatural</span>
+            <span class="badge badge--primary">#BondiBowl</span>
+            <span class="badge badge--coral">#AcaiBowl</span>
+            <span class="badge badge--coral">#ComidaSaludable</span>
+            <span class="badge badge--green">#Barrancabermeja</span>
+            <span class="badge badge--green">#BarrancaFit</span>
+            <span class="badge badge--sand">#HealthyLifestyle</span>
+            <span class="badge badge--sand">#CleanEating</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Calendar -->
+    <h3 class="subsection">Frecuencia de Publicación</h3>
+    <table class="hierarchy-table mt-2">
+      <thead>
+        <tr>
+          <th>Formato</th>
+          <th>Plataforma</th>
+          <th>Frecuencia</th>
+          <th>Prioridad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Reels / Videos cortos</td>
+          <td>Instagram + TikTok</td>
+          <td style="font-size:0.85rem;">3-4 por semana</td>
+          <td><span class="badge badge--coral" style="margin:0;">Máxima</span></td>
+        </tr>
+        <tr>
+          <td>Feed (fotos)</td>
+          <td>Instagram</td>
+          <td style="font-size:0.85rem;">4-5 por semana</td>
+          <td><span class="badge badge--primary" style="margin:0;">Alta</span></td>
+        </tr>
+        <tr>
+          <td>Stories</td>
+          <td>Instagram</td>
+          <td style="font-size:0.85rem;">3-5 por día</td>
+          <td><span class="badge badge--primary" style="margin:0;">Alta</span></td>
+        </tr>
+        <tr>
+          <td>TikTok nativo</td>
+          <td>TikTok</td>
+          <td style="font-size:0.85rem;">3-7 por semana</td>
+          <td><span class="badge badge--green" style="margin:0;">Alta</span></td>
+        </tr>
+        <tr>
+          <td>Difusión WhatsApp</td>
+          <td>WhatsApp Business</td>
+          <td style="font-size:0.85rem;">2-3 por semana</td>
+          <td><span class="badge badge--sand" style="margin:0;">Media</span></td>
+        </tr>
+        <tr>
+          <td>Lives</td>
+          <td>Instagram</td>
+          <td style="font-size:0.85rem;">1-2 por mes</td>
+          <td><span class="badge badge--sand" style="margin:0;">Media</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ========== 11 — INCORRECT USAGE ========== -->
+  <section id="dont">
+    <div class="section-num">11 — Usos Incorrectos</div>
+    <h2 class="section-title">Lo que NO se debe hacer</h2>
+    <p class="section-subtitle">Proteger la marca requiere saber qué evitar. Estos errores diluyen la identidad y confunden al público.</p>
+
+    <h3 class="subsection">Logo — Usos Prohibidos</h3>
+    <div class="grid-4 mt-2">
+      <div style="text-align:center;">
+        <div class="logo-container" style="background:var(--white); border:2px dashed var(--coral); min-height:140px; flex-direction:column;">
+          <div class="logo-main" style="font-size:1.5rem; color:var(--acai); transform:scaleX(1.5);">BONDI</div>
+          <div class="logo-main" style="font-size:0.8rem; color:var(--coral); letter-spacing:0.1em;">AÇAÍ</div>
+        </div>
+        <div style="font-size:0.75rem; color:var(--coral); font-weight:600; margin-top:0.5rem;">No distorsionar</div>
+      </div>
+      <div style="text-align:center;">
+        <div class="logo-container" style="background:var(--white); border:2px dashed var(--coral); min-height:140px; flex-direction:column;">
+          <div class="logo-main" style="font-size:1.5rem; color:#999;">BONDI</div>
+          <div class="logo-main" style="font-size:0.8rem; color:#ccc; letter-spacing:0.1em;">AÇAÍ</div>
+        </div>
+        <div style="font-size:0.75rem; color:var(--coral); font-weight:600; margin-top:0.5rem;">No usar colores no aprobados</div>
+      </div>
+      <div style="text-align:center;">
+        <div class="logo-container" style="background:var(--white); border:2px dashed var(--coral); min-height:140px; flex-direction:column;">
+          <div class="logo-main" style="font-size:1.5rem; color:var(--acai); opacity:0.3;">BONDI</div>
+          <div class="logo-main" style="font-size:0.8rem; color:var(--coral); letter-spacing:0.1em; opacity:0.3;">AÇAÍ</div>
+        </div>
+        <div style="font-size:0.75rem; color:var(--coral); font-weight:600; margin-top:0.5rem;">No reducir opacidad</div>
+      </div>
+      <div style="text-align:center;">
+        <div class="logo-container" style="background:var(--white); border:2px dashed var(--coral); min-height:140px; flex-direction:column;">
+          <div class="logo-main" style="font-size:1.5rem; color:var(--acai); transform:rotate(15deg);">BONDI</div>
+          <div class="logo-main" style="font-size:0.8rem; color:var(--coral); letter-spacing:0.1em; transform:rotate(15deg);">AÇAÍ</div>
+        </div>
+        <div style="font-size:0.75rem; color:var(--coral); font-weight:600; margin-top:0.5rem;">No rotar</div>
+      </div>
+    </div>
+
+    <div class="grid-4 mt-2">
+      <div style="text-align:center;">
+        <div class="logo-container" style="background: repeating-linear-gradient(45deg, #e0e0e0, #e0e0e0 10px, #f0f0f0 10px, #f0f0f0 20px); border:2px dashed var(--coral); min-height:140px; flex-direction:column;">
+          <div class="logo-main" style="font-size:1.5rem; color:var(--acai);">BONDI</div>
+          <div class="logo-main" style="font-size:0.8rem; color:var(--coral); letter-spacing:0.1em;">AÇAÍ</div>
+        </div>
+        <div style="font-size:0.75rem; color:var(--coral); font-weight:600; margin-top:0.5rem;">No sobre fondos complejos</div>
+      </div>
+      <div style="text-align:center;">
+        <div class="logo-container" style="background:var(--white); border:2px dashed var(--coral); min-height:140px; flex-direction:column;">
+          <div style="font-family:'Times New Roman',serif; font-weight:700; font-size:1.5rem; color:var(--acai);">BONDI</div>
+          <div style="font-family:'Times New Roman',serif; font-size:0.8rem; color:var(--coral); letter-spacing:0.1em;">AÇAÍ</div>
+        </div>
+        <div style="font-size:0.75rem; color:var(--coral); font-weight:600; margin-top:0.5rem;">No cambiar tipografía</div>
+      </div>
+      <div style="text-align:center;">
+        <div class="logo-container" style="background:var(--white); border:2px dashed var(--coral); min-height:140px; flex-direction:column;">
+          <div class="logo-main" style="font-size:1.5rem; color:var(--acai); text-shadow:3px 3px 6px rgba(0,0,0,0.4);">BONDI</div>
+          <div class="logo-main" style="font-size:0.8rem; color:var(--coral); letter-spacing:0.1em; text-shadow:3px 3px 6px rgba(0,0,0,0.4);">AÇAÍ</div>
+        </div>
+        <div style="font-size:0.75rem; color:var(--coral); font-weight:600; margin-top:0.5rem;">No agregar sombras</div>
+      </div>
+      <div style="text-align:center;">
+        <div class="logo-container" style="background:var(--white); border:2px dashed var(--coral); min-height:140px; flex-direction:column;">
+          <div class="logo-main" style="font-size:1.5rem; color:var(--acai); -webkit-text-stroke: 2px var(--coral);">BONDI</div>
+          <div class="logo-main" style="font-size:0.8rem; color:var(--coral); letter-spacing:0.1em;">AÇAÍ</div>
+        </div>
+        <div style="font-size:0.75rem; color:var(--coral); font-weight:600; margin-top:0.5rem;">No agregar contornos</div>
+      </div>
+    </div>
+
+    <!-- General Don'ts -->
+    <h3 class="subsection">Errores Generales de Marca</h3>
+    <div class="grid-2 mt-2">
+      <div class="card" style="border-left:4px solid var(--coral);">
+        <div class="card__title" style="color:var(--coral);">Colores</div>
+        <div class="card__text">No usar colores fuera de la paleta definida. No crear gradientes no aprobados. No invertir la jerarquía de color (ej: coral como dominante y morado como acento).</div>
+      </div>
+      <div class="card" style="border-left:4px solid var(--coral);">
+        <div class="card__title" style="color:var(--coral);">Tipografía</div>
+        <div class="card__text">No sustituir Poppins/Inter por Arial, Times New Roman, Comic Sans u otras tipografías no aprobadas. No usar más de 2 pesos tipográficos en una misma pieza.</div>
+      </div>
+      <div class="card" style="border-left:4px solid var(--coral);">
+        <div class="card__title" style="color:var(--coral);">Fotografía</div>
+        <div class="card__text">No publicar fotos oscuras, borrosas o con filtros fríos/grises. No usar fotos de stock genéricas. El contenido fotográfico debe ser propio y coherente con la guía de estilo.</div>
+      </div>
+      <div class="card" style="border-left:4px solid var(--coral);">
+        <div class="card__title" style="color:var(--coral);">Comunicación</div>
+        <div class="card__text">No usar un tono corporativo, distante o agresivo. No hacer afirmaciones de salud no verificables. No ignorar la guía de voz y tono definida en este manual.</div>
+      </div>
+    </div>
+
+    <!-- Final Note -->
+    <div class="quote mt-4" style="background: linear-gradient(135deg, var(--dark) 0%, #2D2D5E 100%);">
+      <div class="quote__text" style="font-size:1.1rem;">
+        La marca es una promesa. Cada vez que se aplica correctamente, esa promesa se fortalece. Cada vez que se usa de forma inconsistente, se debilita. Este manual existe para que Bondi Açaí crezca con la misma energía y coherencia desde el primer bowl hasta el punto número cien.
+      </div>
+      <div class="quote__attr">— Principio rector del Brand Book</div>
+    </div>
+
+    <div style="text-align:center; margin-top:4rem; padding:3rem 0; border-top:1px solid var(--gray-light);">
+      <div class="logo-main" style="font-size:2rem; color:var(--acai);">BONDI</div>
+      <div class="logo-main" style="font-size:1.1rem; color:var(--coral); letter-spacing:0.15em;">AÇAÍ</div>
+      <div style="font-family:'Poppins',sans-serif; font-weight:300; font-size:0.8rem; color:var(--gray); margin-top:1rem; letter-spacing:0.2em; text-transform:uppercase;">Energía Natural</div>
+      <div style="font-size:0.75rem; color:var(--gray); margin-top:1.5rem;">Brand Book v1.0 — Abril 2026</div>
+      <div style="font-size:0.7rem; color:var(--gray-light); margin-top:0.25rem;">Barrancabermeja, Colombia</div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+(function() {
+  var btn = document.getElementById('menuToggle');
+  var overlay = document.getElementById('overlayMenu');
+  var links = overlay.querySelectorAll('.overlay-link');
+
+  function toggleMenu() {
+    var open = overlay.classList.toggle('is-open');
+    btn.classList.toggle('is-open', open);
+    btn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  function closeMenu() {
+    overlay.classList.remove('is-open');
+    btn.classList.remove('is-open');
+    btn.setAttribute('aria-label', 'Abrir menú');
+    document.body.style.overflow = '';
+  }
+
+  btn.addEventListener('click', toggleMenu);
+
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function() {
+      closeMenu();
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
