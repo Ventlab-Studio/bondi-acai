@@ -4,6 +4,22 @@ Plan de negocios para **Bondi Açaí**, el primer negocio especializado en aça�
 
 ---
 
+## Investigación de Soporte
+
+Documentos de investigación de mercado que fundamentan el plan:
+
+1. [Panorama de la industria del açaí y frozen yogurt](Investigacion%20de%20Mercado/01-panorama-industria-acai-froyo)
+2. [Modelo financiero de referencia](Investigacion%20de%20Mercado/02-modelo-financiero)
+3. [Estrategia de marketing](Investigacion%20de%20Mercado/03-estrategia-marketing)
+4. [Operaciones y cadena de suministro](Investigacion%20de%20Mercado/04-operaciones-y-cadena-suministro)
+5. [Análisis del mercado local — Barrancabermeja](Investigacion%20de%20Mercado/05-analisis-mercado-local-barrancabermeja)
+6. [Marco legal y regulatorio en Colombia](Investigacion%20de%20Mercado/06-marco-legal-regulatorio)
+7. [Análisis competitivo](Investigacion%20de%20Mercado/07-analisis-competitivo)
+8. [Estrategia de crecimiento y escalabilidad](Investigacion%20de%20Mercado/08-estrategia-crecimiento-escalabilidad)
+9. [Lecciones de la industria del frozen yogurt (Hormozi)](Investigacion%20de%20Mercado/09-lecciones-industria-froyo-hormozi)
+
+---
+
 ## Plan de Negocios
 
 0. [Brief del proyecto](Plan%20de%20Negocios/00-brief)
@@ -27,22 +43,6 @@ Modelo financiero con proyecciones, indicadores de rentabilidad y propuesta al i
 
 - [Modelo financiero (Excel)](Evaluacion%20Financiera/Bondi_Acai_Evaluacion_Financiera.xlsx)
 - [Metodología y propuesta al inversionista](Evaluacion%20Financiera/Metodologia_y_Propuesta_Inversionista)
-
----
-
-## Investigación de Soporte
-
-Documentos de investigación de mercado que fundamentan el plan:
-
-1. [Panorama de la industria del açaí y frozen yogurt](Investigacion%20de%20Mercado/01-panorama-industria-acai-froyo)
-2. [Modelo financiero de referencia](Investigacion%20de%20Mercado/02-modelo-financiero)
-3. [Estrategia de marketing](Investigacion%20de%20Mercado/03-estrategia-marketing)
-4. [Operaciones y cadena de suministro](Investigacion%20de%20Mercado/04-operaciones-y-cadena-suministro)
-5. [Análisis del mercado local — Barrancabermeja](Investigacion%20de%20Mercado/05-analisis-mercado-local-barrancabermeja)
-6. [Marco legal y regulatorio en Colombia](Investigacion%20de%20Mercado/06-marco-legal-regulatorio)
-7. [Análisis competitivo](Investigacion%20de%20Mercado/07-analisis-competitivo)
-8. [Estrategia de crecimiento y escalabilidad](Investigacion%20de%20Mercado/08-estrategia-crecimiento-escalabilidad)
-9. [Lecciones de la industria del frozen yogurt (Hormozi)](Investigacion%20de%20Mercado/09-lecciones-industria-froyo-hormozi)
 
 ---
 
